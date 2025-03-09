@@ -1,0 +1,111 @@
+:root {
+    --Laranja: #ED4231;
+    --Branco-Gelo: #EDF2FB;
+    --Preto: #262626;
+
+    --bordas: 1px solid var(--Preto);
+    --bordas-hover: 1px solid var(--Laranja);
+
+    --trasição-botao: transition-duration: 0.5s;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--Preto);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--Branco-Gelo);
+    padding: 15px ;
+
+    img {
+        width: 20vw;
+        height: 10vh;
+        cursor: pointer;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80vw;;
+        justify-content: space-around;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            width: 50vw;
+            justify-content: space-around;
+
+            li {
+            margin: 0 10px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--Preto);
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+
+            &:hover {
+                color: var(--Laranja);
+                transform: scale(1.1);
+            }
+            }
+        }
+    }
+
+    .botao-doar {
+        width: 188px;
+        height: 58px;
+        border-radius: 20px;
+        background-color: var(--Laranja);
+        color: var(--Branco-Gelo);
+        font-size: 16px;
+        font-weight: bold;
+
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--Branco-Gelo);
+            color: var(--Preto);
+            border: 1px solid var(--Preto);
+            transition-duration: var(--trasição-botao);
+        }
+    }
+
+
+
+    .botao-login{
+        width: 188px;
+        height: 58px;
+        border-radius: 20px;
+        background-color: var(--Branco-Gelo);
+        color: var(--Preto);
+        font-size: 16px;
+        font-weight: bold;
+        border: 1px solid var(--Preto);
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--Laranja);
+            color: var(--Branco-Gelo);
+            border: none;
+            transition-duration: var(--trasição-botao);
+        }
+
+    }
+
+}
