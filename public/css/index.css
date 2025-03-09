@@ -166,3 +166,97 @@ header {
         }
     }
 }
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+
+
+    .about-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 400;
+        font-size: 20px;
+        padding: 10vh;
+
+
+        h1{
+            font-weight: bold;
+            font-size: 60px;
+        }
+
+        p{
+            font-size: 20px;
+            font-weight: 100;
+            width: 50vw;
+            text-align: center;
+            padding: 5vh;
+        }
+
+    }
+}
+
+.about-container {
+    position: relative;
+    width: 100%;
+    height: 50vh; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    padding: 0px; 
+}
+
+.images-about {
+    position: relative;
+    width: 280px;
+    height: 280px;
+}
+
+
+.images-about img {
+    position: absolute;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.enfermeira {
+    width: 289px;
+    height: 289px;
+    top: -100px;
+    left: -10px;
+    z-index: 2;
+}
+
+.mulher-mascara {
+    width: 212px;
+    height: 212px;
+    top: 100px;
+    left: 140px;
+    z-index: 3;
+}
+
+.menino-cabelo {
+    width: 203px;
+    height: 275px;
+    top: -50px;
+    left: 300px;
+    z-index: 2;
+}
+
+
+.logo-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.logo {
+    width: 20vw;
+}
+
+
+
