@@ -174,12 +174,12 @@ header {
 }
 
 
-.about {
+.quem-somos {
     display: flex;
     flex-direction: column;
 
 
-    .about-text {
+    .quem-somos-text {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -204,7 +204,7 @@ header {
     }
 }
 
-.about-container {
+.quem-somos-container {
     position: relative;
     width: 100%;
     height: 50vh;
@@ -214,14 +214,14 @@ header {
     padding: 0px;
 }
 
-.images-about {
+.images-quem-somos {
     position: relative;
     width: 280px;
     height: 280px;
 }
 
 
-.images-about img {
+.images-quem-somos img {
     position: absolute;
     border-radius: 10px;
     object-fit: cover;
@@ -253,7 +253,7 @@ header {
 }
 
 
-.logo-about {
+.logo-quem-somos {
     display: flex;
     align-items: center;
     justify-content: center;
