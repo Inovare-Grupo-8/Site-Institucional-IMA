@@ -30,7 +30,7 @@ header {
     display: flex;
     flex-direction: row;
     background-color: var(--Branco-Gelo);
-    padding: 15px ;
+    padding: 15px;
 
     img {
         width: 20vw;
@@ -42,7 +42,8 @@ header {
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 80vw;;
+        width: 80vw;
+        ;
         justify-content: space-around;
 
         ul {
@@ -53,17 +54,22 @@ header {
             justify-content: space-around;
 
             li {
-            margin: 0 10px;
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--Preto);
-            cursor: pointer;
-            transition: color 0.3s ease, transform 0.3s ease;
+                margin: 0 10px;
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: var(--Preto);
+                cursor: pointer;
+                transition: color 0.3s ease, transform 0.3s ease;
 
-            &:hover {
-                color: var(--Laranja);
-                transform: scale(1.1);
-            }
+                a{
+                    text-decoration: none;
+                    color: var(--Preto);
+                }
+
+                a:hover {
+                    color: var(--Laranja);
+                    transform: scale(1.1);
+                }
             }
         }
     }
@@ -79,7 +85,7 @@ header {
 
         border: none;
         cursor: pointer;
-        
+
         &:hover {
             background-color: var(--Branco-Gelo);
             color: var(--Preto);
@@ -90,7 +96,7 @@ header {
 
 
 
-    .botao-login{
+    .botao-login {
         width: 10vw;
         height: 5vh;
         border-radius: 20px;
@@ -114,18 +120,18 @@ header {
 
 .home {
     display: flex;
-    height: 86.9vh ;
+    height: 86.9vh;
     flex-direction: column;
-    background: 
-        linear-gradient(rgba(198, 1, 188, 0.5), rgba(49, 32, 188, 0.70)), 
-        url('/public/assets/imgs/FotoFundoHome.svg');
+    background:
+        linear-gradient(rgba(198, 1, 188, 0.5), rgba(49, 32, 188, 0.70)),
+        url('../assets/imgs/FotoFundoHome.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     justify-content: flex-start;
     padding: 5vw;
 
-    .home-text{
+    .home-text {
         display: flex;
         flex-direction: column;
         height: 50vw;
@@ -147,17 +153,17 @@ header {
         }
 
         button {
-        width: 13vw;
-        height: 5vh;
-        border-radius: 20px;
-        background-color: var(--Laranja);
-        color: var(--Branco-Gelo);
-        font-size: 16px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        
-             &:hover {
+            width: 13vw;
+            height: 5vh;
+            border-radius: 20px;
+            background-color: var(--Laranja);
+            color: var(--Branco-Gelo);
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
                 background-color: var(--Laranja-escuro);
                 color: var(--Branco-Gelo);
                 border: none;
@@ -173,7 +179,7 @@ header {
     flex-direction: column;
 
 
-    .about-text{
+    .about-text {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -182,12 +188,12 @@ header {
         padding: 10vh;
 
 
-        h1{
+        h1 {
             font-weight: bold;
             font-size: 60px;
         }
 
-        p{
+        p {
             font-size: 20px;
             font-weight: 100;
             width: 50vw;
@@ -201,11 +207,11 @@ header {
 .about-container {
     position: relative;
     width: 100%;
-    height: 50vh; 
+    height: 50vh;
     display: flex;
     align-items: center;
-    justify-content: space-around; 
-    padding: 0px; 
+    justify-content: space-around;
+    padding: 0px;
 }
 
 .images-about {
@@ -257,6 +263,3 @@ header {
 .logo {
     width: 20vw;
 }
-
-
-
