@@ -355,7 +355,7 @@ header {
     flex-direction: column;
     background:
         linear-gradient(rgba(102, 17, 101, 0.40), rgba(255, 0, 242, 0.40)),
-        url('../assets/imgs/FotoFundoHome.svg');
+        url('../assets/imgs/FundoQueroDoar.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
