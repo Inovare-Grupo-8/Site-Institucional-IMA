@@ -9,6 +9,9 @@
     --Laranja-escuro: #9e170b;
     --bordas: 1px solid var(--Preto);
     --bordas-hover: 1px solid var(--Laranja);
+    --azulEscuro: #1A1466;
+    --CINZA: #ADADAD;
+
 
     --trasicao-botao: transition-duration: 1s;
 
@@ -102,7 +105,7 @@ header {
         height: 5vh;
         border-radius: 20px;
         background-color: var(--Branco-Gelo);
-        color: var(--Preto);
+        color: var (--Preto);
         font-size: 16px;
         font-weight: bold;
         border: 1px solid var(--Preto);
@@ -110,7 +113,7 @@ header {
 
         &:hover {
             background-color: var(--Laranja);
-            color: var(--Branco-Gelo);
+            color: var (--Branco-Gelo);
             border: none;
             transition-duration: var(--trasicao-botao);
         }
@@ -269,6 +272,7 @@ header {
 
 .onda-top {
     position: absolute;
+    border: none;
     width: 100%;
     height: 30vh;
     margin-top: 0;
@@ -357,7 +361,7 @@ header {
     background-position: center;
     justify-content: flex-start;
     padding: 5vw;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 
     .voluntarios-text {
         display: flex;
@@ -392,6 +396,7 @@ header {
             border: none;
             cursor: pointer;
 
+
             &:hover {
                 background-color: var(--Laranja-escuro);
                 color: var(--Branco-Gelo);
@@ -406,12 +411,342 @@ header {
 
 .onda-bottom {
     position: relative;
-    width: 120%; 
+    width: 120%;
     height: 50vh;
     background: rgb(237, 71, 49, 0.65);
-    clip-path: polygon(100% 0%, 0% 0% , 0.00% 76.71%, 1.67% 75.56%, 3.33% 74.13%, 5.00% 72.46%, 6.67% 70.57%, 8.33% 68.51%, 10.00% 66.30%, 11.67% 63.99%, 13.33% 61.62%, 15.00% 59.24%, 16.67% 56.88%, 18.33% 54.60%, 20.00% 52.44%, 21.67% 50.42%, 23.33% 48.61%, 25.00% 47.01%, 26.67% 45.68%, 28.33% 44.62%, 30.00% 43.86%, 31.67% 43.42%, 33.33% 43.30%, 35.00% 43.51%, 36.67% 44.03%, 38.33% 44.86%, 40.00% 45.99%, 41.67% 47.40%, 43.33% 49.05%, 45.00% 50.92%, 46.67% 52.98%, 48.33% 55.18%, 50.00% 57.48%, 51.67% 59.85%, 53.33% 62.23%, 55.00% 64.59%, 56.67% 66.88%, 58.33% 69.05%, 60.00% 71.08%, 61.67% 72.91%, 63.33% 74.52%, 65.00% 75.88%, 66.67% 76.96%, 68.33% 77.74%, 70.00% 78.20%, 71.67% 78.35%, 73.33% 78.17%, 75.00% 77.67%, 76.67% 76.86%, 78.33% 75.75%, 80.00% 74.37%, 81.67% 72.73%, 83.33% 70.88%, 85.00% 68.84%, 86.67% 66.65%, 88.33% 64.35%, 90.00% 61.99%, 91.67% 59.60%, 93.33% 57.24%, 95.00% 54.95%, 96.67% 52.76%, 98.33% 50.72%, 100.00% 48.87%);
-    transform: rotate(-5deg); 
-    top: -17vh; 
-    left: -15%; 
+    clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.71%, 1.67% 75.56%, 3.33% 74.13%, 5.00% 72.46%, 6.67% 70.57%, 8.33% 68.51%, 10.00% 66.30%, 11.67% 63.99%, 13.33% 61.62%, 15.00% 59.24%, 16.67% 56.88%, 18.33% 54.60%, 20.00% 52.44%, 21.67% 50.42%, 23.33% 48.61%, 25.00% 47.01%, 26.67% 45.68%, 28.33% 44.62%, 30.00% 43.86%, 31.67% 43.42%, 33.33% 43.30%, 35.00% 43.51%, 36.67% 44.03%, 38.33% 44.86%, 40.00% 45.99%, 41.67% 47.40%, 43.33% 49.05%, 45.00% 50.92%, 46.67% 52.98%, 48.33% 55.18%, 50.00% 57.48%, 51.67% 59.85%, 53.33% 62.23%, 55.00% 64.59%, 56.67% 66.88%, 58.33% 69.05%, 60.00% 71.08%, 61.67% 72.91%, 63.33% 74.52%, 65.00% 75.88%, 66.67% 76.96%, 68.33% 77.74%, 70.00% 78.20%, 71.67% 78.35%, 73.33% 78.17%, 75.00% 77.67%, 76.67% 76.86%, 78.33% 75.75%, 80.00% 74.37%, 81.67% 72.73%, 83.33% 70.88%, 85.00% 68.84%, 86.67% 66.65%, 88.33% 64.35%, 90.00% 61.99%, 91.67% 59.60%, 93.33% 57.24%, 95.00% 54.95%, 96.67% 52.76%, 98.33% 50.72%, 100.00% 48.87%);
+    transform: rotate(-3deg);
+    top: -17vh;
+    left: -15%;
     right: 0;
+}
+
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+        width: 13vw;
+        height: 5vh;
+        border-radius: 20px;
+        background-color: var(--Laranja);
+        color: var(--Branco-Gelo);
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--Laranja-escuro);
+            color: var(--Branco-Gelo);
+            border: none;
+            transition-duration: var(--trasicao-botao);
+        }
+    }
+
+    .servicos-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 400;
+        font-size: 20px;
+        padding: 10vh;
+        margin-top: -35vh;
+    }
+
+    .servicos-text h1 {
+        font-weight: bold;
+        font-size: 60px;
+    }
+
+    .servicos-text p {
+        font-size: 20px;
+        font-weight: 100;
+        width: 50vw;
+        text-align: center;
+        padding: 5vh;
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        padding: 20px;
+        justify-items: center;
+        align-items: start;
+    }
+
+    .icon-contabil,
+    .icon-fisioterapia,
+    .icon-juridica,
+    .icon-psicologia,
+    .icon-nutricao,
+    .icon-quiropraxia,
+    .icon-pediatria,
+    .icon-financeiro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        margin: 20px;
+        background-color: var(--Branco-Gelo);
+    }
+
+    .icon-contabil img,
+    .icon-fisioterapia img,
+    .icon-juridica img,
+    .icon-psicologia img,
+    .icon-nutricao img,
+    .icon-quiropraxia img,
+    .icon-pediatria img,
+    .icon-financeiro img {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+    }
+
+    .icon-contabil h1,
+    .icon-fisioterapia h1,
+    .icon-juridica h1,
+    .icon-psicologia h1,
+    .icon-nutricao h1,
+    .icon-quiropraxia h1,
+    .icon-pediatria h1,
+    .icon-financeiro h1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+
+    }
+
+    .icon-contabil p,
+    .icon-fisioterapia p,
+    .icon-juridica p,
+    .icon-psicologia p,
+    .icon-nutricao p,
+    .icon-quiropraxia p,
+    .icon-pediatria p,
+    .icon-financeiro p {
+        font-size: 14px;
+        color: var(--Preto);
+    }
+
+}
+
+
+
+
+.parceiros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--azulEscuro);
+    padding: 40vh 0 20vh 0;
+
+    .parceiros-text h1 {
+        color: var(--Branco-Gelo);
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .image-parceiros {
+        display: flex;
+        justify-content: center;
+        gap: 20vw;
+    }
+
+    .image-parceiros img {
+        width: 488px;
+        height: auto;
+    }
+
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 174px 151px 174px 148px;
+    background-color: var(--Branco-Gelo);
+
+    .contato-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 80%;
+        max-width: 1200px;
+    }
+
+    .contato-form {
+        flex: 1;
+        margin-right: 123px;
+    }
+
+    .contato-form h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: var(--Preto);
+    }
+
+    .contato-form .highlight {
+        color: var(--Laranja);
+    }
+
+    .contato-form p {
+        font-size: 16px;
+        color: var(--Preto);
+        margin-bottom: 20px;
+    }
+
+    .contato-form form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contato-form label {
+        font-size: 14px;
+        color: var(--Preto);
+        margin-bottom: 5px;
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid var(--CINZA);
+        background-color: var(--Branco-Gelo);
+        border-radius: 5px;
+    }
+
+    .contato-form button {
+        padding: 10px;
+        background-color: var(--Laranja);
+        color: var(--Branco-Gelo);
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .contato-form button:hover {
+        background-color: var(--Laranja-escuro);
+    }
+
+    .contato-info {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .contato-info .info-item {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 10px;
+        color: var(--Laranja);
+    }
+
+
+
+    .contato-info .info-item img {
+
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+    }
+
+    .contato-map {
+        flex: 1;
+    }
+
+    .contato-map img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+}
+
+
+.perguntas-frequentes {
+    display: flex;
+    background-color: var(--Laranja);
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 50vh;
+        width: 356px;
+        padding-left: 10vh;
+    }
+
+
+    .container-faq {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        /* max-width: 200vw; */
+        /* max-height: 595px; */
+        background-color: var(--Branco-Gelo);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+    }
+
+    .faq-container {
+        background-color: var(--Branco-Gelo);
+        width: 1060px;
+        padding-left: 10vh;
+        padding-right: 10vh;
+        border-radius: 10px;
+
+    }
+
+    .faq-header {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .faq-item {
+        box-shadow: 0px 0.377981px 0px #ED4231, inset 2.83px 0px 0px #ED4231;
+
+    }
+
+    .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 1s;
+    }
+
+    .faq-question:hover {
+        background: var(--CINZA);
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 15px;
+        font-size: 14px;
+        color: var(--CINZA)
+    }
+
+    .faq-question.active+.faq-answer {
+        display: block;
+    }
+
+
+
+
 }
