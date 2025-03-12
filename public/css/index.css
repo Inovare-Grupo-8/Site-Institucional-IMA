@@ -689,7 +689,6 @@ header {
 
 }
 
-
 .perguntas-frequentes {
     display: flex;
     background-color: var(--Laranja);
@@ -760,6 +759,62 @@ header {
         max-height: 500px; 
         padding: 15px;
     }
+}
+
+footer {
+    background-color: #f5f8fc;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    color: var(--Preto);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+
+.footer-logo {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.footer-logo img {
+    height: 12vh;
+    margin-bottom: 15px;
+}
+
+.footer-logo input {
+    background-color: var(--Branco-Gelo);
+    border: none;
+    height: 50px;
+    width: 80%;
+    border-bottom: 2px solid var(--CINZA);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button-footer {
+    background-color: var(--Laranja);
+    height: 50px;
+    width: 50px;
+    color: var(--Branco-Gelo);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background-color: var(--Laranja-escuro);
+    }
+}
 
     .faq-question.active::after {
         content: "\f077"; 
@@ -916,6 +971,105 @@ footer {
     color: #777;
     gap: 20px;
     padding: 20px;
+}
+
+.footer-bottom a {
+    margin-right: 10px;
+    color: #e63946;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: var(--Laranja-escuro);
+}
+=======
+.footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.footer-links h4 {
+    color: var(--Laranja);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--Preto);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--Laranja);
+}
+
+
+.footer-donate {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+
+
+    p {
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
+
+.footer-donate button {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    background-color: var(--Laranja);
+    color: var(--Branco-Gelo);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-donate button:hover {
+    background-color: var(--Branco-Gelo);
+    color: var(--Preto);
+    border: 1px solid var(--Preto);
+}
+
+
+.footer-social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: var(--Laranja);
+    font-size: 22px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--Laranja-escuro);
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
 }
 
 .footer-bottom a {
