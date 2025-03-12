@@ -674,7 +674,6 @@ header {
 
 }
 
-
 .perguntas-frequentes {
     display: flex;
     background-color: var(--Laranja);
@@ -745,6 +744,7 @@ header {
     .faq-question.active+.faq-answer {
         display: block;
     }
+}
 
 footer {
     background-color: #f5f8fc;
@@ -839,10 +839,10 @@ footer {
     text-align: center;
 
 
-        p{
-            font-weight: bold;
-            font-size: 15px;
-        }
+    p {
+        font-weight: bold;
+        font-size: 15px;
+    }
 }
 
 .footer-donate button {
