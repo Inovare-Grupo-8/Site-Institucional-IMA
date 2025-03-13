@@ -26,18 +26,18 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-::-webkit-scrollbar {
-    width: 12px;
+p,
+button,
+li,
+a,
+label,
+h4 {
+    font-size: var(--tamanho-fonte);
+    ;
 }
 
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--Laranja);
-    border-radius: 20px;
-    border: 2px solid var(--Branco-Gelo);
+h1 {
+    font-size: var(--tamanho-fonte-maior);
 }
 
 p,
@@ -825,7 +825,6 @@ footer {
 .button_rodape {
     text-align: center;
 }
-
 
 .rodape-contribuir {
     text-align: center;
