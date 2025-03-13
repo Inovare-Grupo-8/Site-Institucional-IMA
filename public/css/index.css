@@ -164,7 +164,8 @@ header.scrolled {
     background-repeat: no-repeat;
     background-position: start;
     justify-content: flex-start;
-    padding: 7vw;
+    padding-left: 7vw;
+    padding-top: 10vh;
 
     .home-text {
         display: flex;
