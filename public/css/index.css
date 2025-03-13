@@ -10,34 +10,34 @@
     --bordas: 1px solid var(--Preto);
     --bordas-hover: 1px solid var(--Laranja);
     --azulEscuro: #1A1466;
-    --CINZA: #ADADAD;
-
-
+    --cinza: #ADADAD;
     --trasicao-botao: transition-duration: 1s;
-
+    --tamanho-fonte-menor: 0.8rem;
+    --tamanho-fonte: 1rem;
+    --tamanho-fonte-maior: 2.25rem;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    border: none;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
-    scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    width: 12px;
+p,
+button,
+li,
+a,
+label,
+h4 {
+    font-size: var(--tamanho-fonte);
+    ;
 }
 
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--Laranja);
-    border-radius: 20px;
-    border: 2px solid var(--Branco-Gelo);
+h1 {
+    font-size: var(--tamanho-fonte-maior);
 }
 
 body {
@@ -52,7 +52,7 @@ header {
     padding: 15px;
 
     img {
-        width: 20vw;
+        width: 20%;
         height: 10vh;
         cursor: pointer;
     }
@@ -74,7 +74,6 @@ header {
 
             li {
                 margin: 0 10px;
-                font-size: 1.2rem;
                 font-weight: 500;
                 color: var(--Preto);
                 cursor: pointer;
@@ -94,12 +93,11 @@ header {
     }
 
     .botao-doar {
-        width: 10vw;
-        height: 5vh;
+        width: 10rem;
+        height: 2.5rem;
         border-radius: 20px;
         background-color: var(--Laranja);
         color: var(--Branco-Gelo);
-        font-size: 16px;
         font-weight: bold;
 
         border: none;
@@ -116,19 +114,18 @@ header {
 
 
     .botao-login {
-        width: 10vw;
-        height: 5vh;
+        width: 10rem;
+        height: 2.5rem;
         border-radius: 20px;
         background-color: var(--Branco-Gelo);
         color: var (--Preto);
-        font-size: 16px;
         font-weight: bold;
         border: 1px solid var(--Preto);
         cursor: pointer;
 
         &:hover {
             background-color: var(--Laranja);
-            color: var(--Branco-Gelo);
+            color: var (--Branco-Gelo);
             border: none;
             transition-duration: var(--trasicao-botao);
         }
@@ -158,26 +155,23 @@ header {
         justify-content: center;
 
         h1 {
-            font-size: 55px;
             font-weight: bold;
             color: var(--Branco-Gelo);
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 24px;
             font-weight: 400;
             color: var(--Branco-Gelo);
             margin-bottom: 20px;
         }
 
         button {
-            width: 13vw;
-            height: 5vh;
+            width: 10rem;
+            height: 2.5rem;
             border-radius: 20px;
             background-color: var(--Laranja);
             color: var(--Branco-Gelo);
-            font-size: 16px;
             font-weight: bold;
             border: none;
             cursor: pointer;
@@ -203,21 +197,18 @@ header {
         flex-direction: column;
         align-items: center;
         font-weight: 400;
-        font-size: 20px;
         padding: 10vh;
 
 
         h1 {
             font-weight: bold;
-            font-size: 60px;
         }
 
         p {
-            font-size: 20px;
             font-weight: 100;
-            width: 50vw;
+            width: 40vw;
             text-align: center;
-            padding: 5vh;
+            padding: 3vh 3vh 6vh;
         }
 
     }
@@ -290,7 +281,9 @@ header {
     border: none;
     width: 100%;
     height: 30vh;
-    margin-top: 0;
+    margin: -1px;
+    z-index: 1;
+    padding: 0;
     background: var(--Branco-Gelo);
     clip-path: polygon(100% 0%,
             0% 0%,
@@ -364,7 +357,7 @@ header {
 }
 
 
-.voluntarios {
+.contribua {
     display: flex;
     height: 110.9vh;
     flex-direction: column;
@@ -378,7 +371,7 @@ header {
     padding: 5vw;
     overflow-x: hidden;
 
-    .voluntarios-text {
+    .contribua-text {
         display: flex;
         flex-direction: column;
         height: 50vw;
@@ -387,14 +380,12 @@ header {
         padding-top: 10vh;
 
         h1 {
-            font-size: 55px;
             font-weight: bold;
             color: var(--Branco-Gelo);
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 24px;
             font-weight: 400;
             color: var(--Branco-Gelo);
             margin-bottom: 20px;
@@ -406,7 +397,6 @@ header {
             border-radius: 20px;
             background-color: var(--Laranja);
             color: var(--Branco-Gelo);
-            font-size: 16px;
             font-weight: bold;
             border: none;
             cursor: pointer;
@@ -448,10 +438,10 @@ header {
         border-radius: 20px;
         background-color: var(--Laranja);
         color: var(--Branco-Gelo);
-        font-size: 16px;
         font-weight: bold;
         border: none;
         cursor: pointer;
+        padding-bottom: 5px;
 
         &:hover {
             background-color: var(--Laranja-escuro);
@@ -466,29 +456,28 @@ header {
         flex-direction: column;
         align-items: center;
         font-weight: 400;
-        font-size: 20px;
         padding: 10vh;
         margin-top: -35vh;
     }
 
     .servicos-text h1 {
         font-weight: bold;
-        font-size: 60px;
     }
 
     .servicos-text p {
-        font-size: 20px;
         font-weight: 100;
         width: 50vw;
         text-align: center;
         padding: 5vh;
+        padding-bottom: 0px;
     }
 
     .icons {
+        width: 80vw;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
-        padding: 20px;
+        gap: 20px;
+        padding: 0px 20px 60px;
         justify-items: center;
         align-items: start;
     }
@@ -518,8 +507,8 @@ header {
     .icon-quiropraxia img,
     .icon-pediatria img,
     .icon-financeiro img {
-        width: 90px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
         margin-bottom: 10px;
     }
 
@@ -531,7 +520,7 @@ header {
     .icon-quiropraxia h1,
     .icon-pediatria h1,
     .icon-financeiro h1 {
-        font-size: 20px;
+        font-size: var(--tamanho-fonte);
         font-weight: bold;
         margin-bottom: 10px;
 
@@ -545,7 +534,7 @@ header {
     .icon-quiropraxia p,
     .icon-pediatria p,
     .icon-financeiro p {
-        font-size: 14px;
+        font-size: var(--tamanho-fonte-menor);
         color: var(--Preto);
     }
 
@@ -563,7 +552,6 @@ header {
 
     .parceiros-text h1 {
         color: var(--Branco-Gelo);
-        font-size: 36px;
         font-weight: bold;
         margin-bottom: 30px;
     }
@@ -575,7 +563,7 @@ header {
     }
 
     .image-parceiros img {
-        width: 488px;
+        width: 350px;
         height: auto;
     }
 
@@ -585,15 +573,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 174px 151px 174px 148px;
+    padding: 174px 148px;
     background-color: var(--Branco-Gelo);
 
     .contato-container {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        width: 80%;
-        max-width: 1200px;
+        width: 100%;
     }
 
     .contato-form {
@@ -602,7 +589,6 @@ header {
     }
 
     .contato-form h1 {
-        font-size: 36px;
         font-weight: bold;
         color: var(--Preto);
     }
@@ -612,7 +598,6 @@ header {
     }
 
     .contato-form p {
-        font-size: 16px;
         color: var(--Preto);
         margin-bottom: 20px;
     }
@@ -623,7 +608,6 @@ header {
     }
 
     .contato-form label {
-        font-size: 14px;
         color: var(--Preto);
         margin-bottom: 5px;
     }
@@ -632,7 +616,7 @@ header {
     .contato-form textarea {
         padding: 10px;
         margin-bottom: 15px;
-        border: 1px solid var(--CINZA);
+        border: 1px solid var(--cinza);
         background-color: var(--Branco-Gelo);
         border-radius: 5px;
     }
@@ -644,7 +628,6 @@ header {
         border: none;
         border-radius: 20px;
         cursor: pointer;
-        font-size: 16px;
         font-weight: bold;
     }
 
@@ -669,8 +652,6 @@ header {
         color: var(--Laranja);
     }
 
-
-
     .contato-info .info-item img {
 
         width: 28px;
@@ -682,9 +663,9 @@ header {
         flex: 1;
     }
 
-    .contato-map img {
-        width: 100%;
-        border-radius: 10px;
+    .endereco{
+        padding: 15px;
+        text-align: center
     }
 
 }
@@ -701,9 +682,12 @@ header {
         padding-left: 10vh;
     }
 
+
     .container-faq {
         margin-top: 10vh;
         margin-bottom: 10vh;
+        /* max-width: 200vw; */
+        /* max-height: 595px; */
         background-color: var(--Branco-Gelo);
         display: flex;
         flex-direction: row;
@@ -718,16 +702,18 @@ header {
         padding-left: 10vh;
         padding-right: 10vh;
         border-radius: 10px;
+
     }
 
     .faq-header {
         text-align: center;
-        font-size: 40px;
+        font-size: var(--tamanho-fonte-maior);
         font-weight: bold;
     }
 
     .faq-item {
         box-shadow: 0px 0.377981px 0px #ED4231, inset 2.83px 0px 0px #ED4231;
+
     }
 
     .faq-question {
@@ -741,191 +727,99 @@ header {
     }
 
     .faq-question:hover {
-        background: var(--CINZA);
+        background: var(--cinza);
     }
 
     .faq-answer {
         display: none;
         padding: 15px;
-        font-size: 14px;
-        color: var(--CINZA);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 1s ease-out, padding 1s ease-out;
+        font-size: var(--tamanho-fonte);
+        color: var(--cinza)
     }
 
-    .faq-question.active + .faq-answer {
+    .faq-question.active+.faq-answer {
         display: block;
-        max-height: 500px; 
-        padding: 15px;
     }
 }
-
-footer {
-    background-color: #f5f8fc;
-    padding: 50px 20px;
-    font-family: Arial, sans-serif;
-    color: var(--Preto);
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 20px;
-}
-
-
-.footer-logo {
-    flex: 1;
-    min-width: 280px;
-    text-align: left;
-}
-
-.footer-logo img {
-    height: 12vh;
-    margin-bottom: 15px;
-}
-
-.footer-logo input {
-    background-color: var(--Branco-Gelo);
-    border: none;
-    height: 50px;
-    width: 80%;
-    border-bottom: 2px solid var(--CINZA);
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.button-footer {
-    background-color: var(--Laranja);
-    height: 50px;
-    width: 50px;
-    color: var(--Branco-Gelo);
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-
-    &:hover {
-        background-color: var(--Laranja-escuro);
-    }
-}
-
-    .faq-question.active::after {
-        content: "\f077"; 
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        margin-left: 10px;
-    }
 
 footer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: var(--Branco-Gelo);
-    padding: 50px 20px;
-    font-family: Arial, sans-serif;
-    color: var(--Preto);
+    padding: 30px 0;
+    margin-bottom: 40px
 }
 
-.footer-container {
+.rodape {
+    display: flex;
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center; 
-    gap: 40px;
-    padding: 20px;
-}
-
-.footer-logo {
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    /* align-items: flex-start; */
-}
-
-.footer-logo img {
-    margin-left: 0;
-    margin-bottom: 15px;
-}
-
-.footer-logo input {
+    align-items: center;
     background-color: var(--Branco-Gelo);
-    border: none;
-    height: 50px;
-    width: 80%;
-    border-bottom: 2px solid var(--CINZA);
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.button-footer {
-    background-color: var(--Laranja);
-    height: 50px;
-    width: 50px;
-    color: var(--Branco-Gelo);
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
+.rodape_conteudo {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-items: start;
+    padding: 50px 10px 0;
+}
 
-    &:hover {
-        background-color: var(--Laranja-escuro);
+.logo_rodape {
+    width: 130px;
+}
+
+.colunas {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+
+    p {
+        font-weight: 600;
+        color: var(--Laranja);
     }
 }
 
-.footer-links {
-    flex: 2;
-    display: flex;
-    justify-content: space-around;
-    gap: 50px;
-    text-align: left;
-}
-
-.footer-links h4 {
-    color: var(--Laranja);
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links a {
+.coluna3 a,
+.coluna2 a,
+.coluna1 a {
     text-decoration: none;
-    color: var(--Preto);
-    font-size: 16px;
-    transition: color 0.3s ease;
+    color: #262626;
+    font-size: 15px;
+    display: flex;
+    justify-content: left;
 }
 
-.footer-links a:hover {
-    color: var(--Laranja);
+.coluna3 span,
+.coluna2 span,
+.coluna1 span {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.footer-donate {
-    flex: 1;
-    min-width: 250px;
+.button_rodape {
     text-align: center;
 }
 
-.footer-donate p {
-    /* font-weight: bold; */
-    font-size: 15px;
+
+.rodape-contribuir {
+    text-align: center;
 }
 
-.footer-donate button {
+.rodape-contribuir p {
+    color: var(--Preto);
+    font-size: 3;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.rodape-contribuir button {
     width: 200px;
     height: 45px;
     border-radius: 25px;
@@ -938,296 +832,33 @@ footer {
     transition: all 0.3s ease;
 }
 
-.footer-donate button:hover {
+.rodape-contribuir button:hover {
     background-color: var(--Branco-Gelo);
     color: var(--Preto);
     border: 1px solid var(--Preto);
 }
 
-.footer-social {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer-social a {
-    color: var(--Laranja);
-    font-size: 22px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-social a:hover {
-    color: var(--Laranja-escuro);
-}
-
-.footer-bottom {
+.ultima-linha-rodape {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    margin-top: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #777;
-    gap: 20px;
-    padding: 20px;
-}
-
-.footer-bottom a {
-    margin-right: 10px;
-    color: #e63946;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.footer-bottom a:hover {
-    color: var(--Laranja-escuro);
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-}
-
-.footer-logo {
-    flex: 1;
-    min-width: 280px;
-    text-align: center; 
-}
-
-.footer-logo img {
-    /* height: 15vh; */
-    margin-bottom: 15px;
-}
-
-.footer-logo input {
-    background-color: var(--Branco-Gelo);
-    border: none;
-    height: 50px;
+    gap: 40px;
+    align-items: start;
     width: 80%;
-    border-bottom: 2px solid var(--CINZA);
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 80px 10px 0;
 }
 
-.button-footer {
-    background-color: var(--Laranja);
-    height: 50px;
-    width: 50px;
-    color: var(--Branco-Gelo);
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-
-    &:hover {
-        background-color: var(--Laranja-escuro);
-    }
+.ultima-linha-rodape p {
+    font-size: 13px;
 }
 
-.footer-links {
-    flex: 2;
+.rodape-redes-sociais {
     display: flex;
-    justify-content: space-around;
-    gap: 50px;
-    text-align: left;
-}
-
-.footer-links h4 {
-    color: var(--Laranja);
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: var(--Preto);
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--Laranja);
-}
-
-.footer-donate {
-    flex: 1;
-    min-width: 250px;
-    text-align: center;
-}
-
-.footer-donate p {
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.footer-donate button {
-    width: 100%;
-    height: 45px;
-    border-radius: 25px;
-    background-color: var(--Laranja);
-    color: var(--Branco-Gelo);
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.footer-donate button:hover {
-    background-color: var(--Branco-Gelo);
-    color: var(--Preto);
-    border: 1px solid var(--Preto);
-}
-
-.footer-social {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer-social a {
-    color: var(--Laranja);
-    font-size: 22px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-social a:hover {
-    color: var(--Laranja-escuro);
-}
-
-.footer-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 20%;
     align-items: center;
-    margin-top: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #777;
-    gap: 10px;
 }
 
-.footer-bottom a {
-    margin-right: 10px;
-    color: #e63946;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
+.rodape-redes-sociais i {
 
-.footer-bottom a:hover {
-    color: var(--Laranja-escuro);
-}
-=======
-.footer-links {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    text-align: left;
-}
-
-.footer-links h4 {
     color: var(--Laranja);
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: var(--Preto);
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--Laranja);
-}
-
-
-.footer-donate {
-    flex: 1;
-    min-width: 250px;
-    text-align: center;
-
-
-    p {
-        font-weight: bold;
-        font-size: 15px;
-    }
-}
-
-.footer-donate button {
-    width: 100%;
-    height: 45px;
-    border-radius: 25px;
-    background-color: var(--Laranja);
-    color: var(--Branco-Gelo);
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.footer-donate button:hover {
-    background-color: var(--Branco-Gelo);
-    color: var(--Preto);
-    border: 1px solid var(--Preto);
-}
-
-
-.footer-social {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer-social a {
-    color: var(--Laranja);
-    font-size: 22px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-social a:hover {
-    color: var(--Laranja-escuro);
-}
-
-/* Rodapé Inferior */
-.footer-bottom {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #777;
-}
-
-.footer-bottom a {
-    margin-right: 10px;
-    color: #e63946;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.footer-bottom a:hover {
-    color: var(--Laranja-escuro);
 }
