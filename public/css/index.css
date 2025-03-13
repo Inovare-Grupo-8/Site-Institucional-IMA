@@ -67,7 +67,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 4;
-    
+
     img {
         width: 20%;
         height: 10vh;
@@ -694,10 +694,12 @@ header.scrolled {
     background-color: var(--Laranja);
     justify-content: center;
     align-items: center;
+    height: 80vh;
 
     img {
         height: 50vh;
         width: 356px;
+        padding-top: 5vh;
         padding-left: 10vh;
     }
 
@@ -717,9 +719,8 @@ header.scrolled {
 
     .faq-container {
         background-color: var(--Branco-Gelo);
-        width: 1060px;
-        padding-left: 10vh;
-        padding-right: 10vh;
+        width: 100%;
+        padding: 50px 10vh;
         border-radius: 10px;
 
     }
