@@ -3,3 +3,4 @@ document.querySelectorAll('.faq-question').forEach(item => {
         item.classList.toggle('active');
     });
 });
+
