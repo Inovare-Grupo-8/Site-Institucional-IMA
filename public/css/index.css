@@ -6,7 +6,7 @@
     --Laranja: #ED4231;
     --Branco-Gelo: #EDF2FB;
     --Preto: #262626;
-    --Laranja-escuro: #9e170b;
+    --Laranja-escuro: rgb(201, 58, 45);
     --bordas: 1px solid var(--Preto);
     --bordas-hover: 1px solid var(--Laranja);
     --azulEscuro: #1A1466;
@@ -40,6 +40,20 @@ h1 {
     font-size: var(--tamanho-fonte-maior);
 }
 
+p,
+button,
+li,
+a,
+label,
+h4 {
+    font-size: var(--tamanho-fonte);
+    ;
+}
+
+h1 {
+    font-size: var(--tamanho-fonte-maior);
+}
+
 body {
     background-color: var(--Branco-Gelo);
     overflow-x: hidden;
@@ -50,7 +64,10 @@ header {
     flex-direction: row;
     background-color: var(--Branco-Gelo);
     padding: 15px;
-
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    
     img {
         width: 20%;
         height: 10vh;
@@ -104,9 +121,9 @@ header {
         cursor: pointer;
 
         &:hover {
-            background-color: var(--Branco-Gelo);
-            color: var(--Preto);
-            border: 1px solid var(--Preto);
+            background-color: var(--Laranja-escuro);
+            color: var(--Branco-Gelo);
+            border: none;
             transition-duration: var(--trasicao-botao);
         }
     }
@@ -124,28 +141,30 @@ header {
         cursor: pointer;
 
         &:hover {
-            background-color: var(--Laranja);
+            background-color: #e5e9f1;
             color: var (--Branco-Gelo);
-            border: none;
             transition-duration: var(--trasicao-botao);
         }
-
     }
 
 }
 
+header.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .home {
     display: flex;
-    height: 86.9vh;
+    height: 100vh;
     flex-direction: column;
     background:
         linear-gradient(rgba(198, 1, 188, 0.5), rgba(49, 32, 188, 0.70)),
         url('../assets/imgs/FotoFundoHome.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: start;
     justify-content: flex-start;
-    padding: 5vw;
+    padding: 7vw;
 
     .home-text {
         display: flex;
@@ -368,7 +387,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     justify-content: flex-start;
-    padding: 5vw;
+    padding: 7vw;
     overflow-x: hidden;
 
     .contribua-text {
@@ -663,7 +682,7 @@ header {
         flex: 1;
     }
 
-    .endereco{
+    .endereco {
         padding: 15px;
         text-align: center
     }
@@ -806,7 +825,6 @@ footer {
 .button_rodape {
     text-align: center;
 }
-
 
 .rodape-contribuir {
     text-align: center;
