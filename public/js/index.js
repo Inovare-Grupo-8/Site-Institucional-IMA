@@ -12,3 +12,7 @@ window.addEventListener('scroll', function () {
         header.classList.remove('scrolled');
     }
 });
+
+function voltarHome(){
+    window.location.href = "index.html";
+}
