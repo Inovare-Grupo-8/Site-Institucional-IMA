@@ -35,6 +35,14 @@
       "id": "8c0e",
       "email": "giovanna@example.com",
       "senha": "123456"
+    },
+    {
+      "id": "9689",
+      "nome": "testandoOnline",
+      "email": "jhe@gmail.com",
+      "senha": "123456",
+      "cpf": "12345678901",
+      "dataNascimento": "2025-03-28"
     }
   ]
 }
