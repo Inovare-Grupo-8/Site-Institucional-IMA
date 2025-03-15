@@ -249,6 +249,10 @@ form.sign-in-form {
   transition-delay: 0.6s;
 }
 
+.content p{
+  margin: 50px;
+}
+
 .panel h3 {
   font-weight: 600;
   line-height: 1;

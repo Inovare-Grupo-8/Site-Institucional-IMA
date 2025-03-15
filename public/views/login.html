@@ -22,13 +22,13 @@
                 <h2 class="title">LOGIN</h2>
                 <div class="input-field">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Email" />
+                  <input type="text" id="input_email_login" placeholder="Email" required/>
                 </div>
                 <div class="input-field">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Senha" />
+                  <input type="password" id="input_senha_login" placeholder="Senha" required/>
                 </div>
-                <input type="submit" value="Entrar" class="btn solid" />
+                <input type="button" value="Entrar" class="btn solid" id="btn-entrar" />
                 <p class="social-text">-OU-</p>
                 <div class="social-media">
                   <a href="#" class="social-icon">
@@ -40,25 +40,26 @@
                 <h2 class="title">CADASTRAR</h2>
                 <div class="input-field">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="NOME" />
+                  <input type="text" placeholder="NOME" required/>
                 </div>
                 <div class="input-field">
                   <i class="fas fa-envelope"></i>
-                  <input type="email" placeholder="EMAIL" />
+                  <input type="email" placeholder="EMAIL" required />
                 </div>
                 <div class="input-field">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="SENHA" />
+                  <input type="password" placeholder="SENHA" required/>
                 </div>
                 <div class="input-field">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="CPF" />
+                  <input type="text" placeholder="CPF" required/>
                 </div>
                 <div class="input-field">
                   <i class="fas fa-user"></i>
-                  <input type="date" placeholder="DATA DE NASCIMENTO" />
+                  <input type="date" placeholder="DATA DE NASCIMENTO" required/>
                 </div>
-                <input type="submit" class="btn" value="CADASTRAR" />
+                <input type="button" class="btn" value="CADASTRAR" id="btn-cadastrar"/>
+                <p class="social-text">-OU-</p>
                 <div class="social-media">
                   <a href="#" class="social-icon">
                     <img src="../assets/imgs/simbolo-do-google 1.svg" alt="">
