@@ -1,64 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth@0,75;1,75&display=swap');
-
-
-:root {
-    --Laranja: #ED4231;
-    --Branco-Gelo: #EDF2FB;
-    --Preto: #262626;
-    --Laranja-escuro: #c93a2d;
-    --bordas: 1px solid var(--Preto);
-    --bordas-hover: 1px solid var(--Laranja);
-    --azulEscuro: #1A1466;
-    --cinza: #ADADAD;
-    --trasicao-botao: transition-duration: 1s;
-    --tamanho-fonte-menor: 0.8rem;
-    --tamanho-fonte: 1rem;
-    --tamanho-fonte-maior: 2.25rem;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    border: none;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-}
-
-p,
-button,
-li,
-a,
-label,
-h4 {
-    font-size: var(--tamanho-fonte);
-    ;
-}
-
-h1 {
-    font-size: var(--tamanho-fonte-maior);
-}
-
-p,
-button,
-li,
-a,
-label,
-h4 {
-    font-size: var(--tamanho-fonte);
-    ;
-}
-
-h1 {
-    font-size: var(--tamanho-fonte-maior);
-}
-
-body {
-    background-color: var(--Branco-Gelo);
-    overflow-x: hidden;
-}
-
 header {
     display: flex;
     flex-direction: row;
@@ -79,7 +18,6 @@ header {
         flex-direction: row;
         align-items: center;
         width: 80vw;
-        ;
         justify-content: space-around;
 
         ul {
@@ -116,7 +54,6 @@ header {
         background-color: var(--Laranja);
         color: var(--Branco-Gelo);
         font-weight: bold;
-
         border: none;
         cursor: pointer;
 
@@ -127,8 +64,6 @@ header {
             transition-duration: var(--trasicao-botao);
         }
     }
-
-
 
     .botao-login {
         width: 10rem;
