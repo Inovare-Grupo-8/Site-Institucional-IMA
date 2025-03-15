@@ -1,0 +1,13 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "nome": "Giovanna",
+        "email": "giovanna@example.com",
+        "senha": "123456",
+        "cpf": "12345678901",
+        "dataNascimento": "2000-01-01"
+      }
+    ]
+  }
+  
