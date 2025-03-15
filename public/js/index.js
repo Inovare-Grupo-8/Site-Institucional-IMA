@@ -13,6 +13,9 @@ window.addEventListener('scroll', function () {
     }
 });
 
+
+
+
 function voltarHome(){
     window.location.href = "index.html";
 }
