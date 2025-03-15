@@ -13,9 +13,10 @@ window.addEventListener('scroll', function () {
     }
 });
 
-
-
-
 function voltarHome(){
     window.location.href = "index.html";
+}
+
+function login(){
+    window.location.href = "../public/views/login-cadastro.html";
 }

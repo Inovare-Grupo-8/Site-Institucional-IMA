@@ -1,9 +1,9 @@
+// Seleção de elementos do DOM
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 const btnEntrar = document.querySelector("#btn-entrar");
 const btnCadastrar = document.querySelector("#btn-cadastrar");
-
 const senhaLogin = document.getElementById("input_senha_login");
 const emailLogin = document.getElementById("input_email_login");
 const nomeCadastro = document.querySelector('input[placeholder="NOME"]');
@@ -12,6 +12,7 @@ const senhaCadastro = document.querySelector('input[placeholder="SENHA"]');
 const cpfCadastro = document.querySelector('input[placeholder="CPF"]');
 const dataNascimentoCadastro = document.querySelector('input[placeholder="DATA DE NASCIMENTO"]');
 
+// Alternar entre modos de login e cadastro
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
 });
@@ -20,38 +21,59 @@ sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
 
+// Função para validar o email
 function validar() {
   const emailValue = emailLogin.value;
   const atSymbol = emailValue.indexOf("@");
   const dotSymbol = emailValue.lastIndexOf(".");
 
   if (atSymbol < 1 || dotSymbol < atSymbol + 2 || dotSymbol + 2 >= emailValue.length) {
-      console.log("Email inválido");
-      alert("Por favor, insira um email válido.");
-      return false;
+    console.log("Email inválido");
+    alert("Por favor, insira um email válido.");
+    return false;
   } else {
-      console.log("Email válido.");
-      return true;
+    console.log("Email válido.");
+    return true;
   }
 }
 
-//Aqui ele faz a vlaidação depois do click
+// Validação e login
 btnEntrar.addEventListener("click", () => {
   if (validar()) {
     const emailLoginValue = emailLogin.value;
     const senhaLoginValue = senhaLogin.value;
 
-    // Aqui ele valida com o JSON Server
-    fetch('http://localhost:5000/usuarios')
+    // Validação com o JSON Server
+    fetch('http://localhost:3000/usuarios', {
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      }
+    })
       .then(response => response.json())
       .then(usuarios => {
-        const usuario = usuarios.find(user => user.email === emailLoginValue && user.senha === senhaLoginValue);
-        if (usuario) {
-          console.log("Login realizado com sucesso");
-          alert("Login bem-sucedido!");
+        if (Array.isArray(usuarios)) {
+          // Log dos usuários existentes (apenas nome e email)
+          const usuariosFiltrados = usuarios.map(user => ({
+            nome: user.nome,
+            email: user.email
+          }));
+          console.log("Usuários existentes:", usuariosFiltrados);
+
+          const usuario = usuarios.find(user => user.email === emailLoginValue && user.senha === senhaLoginValue);
+
+          if (usuario) {
+            console.log("Login realizado com sucesso");
+            window.location.href = "../index.html";
+            alert("Login bem-sucedido!");
+          } else {
+            console.log("Login falhou");
+            alert("Email ou senha incorretos.");
+          }
         } else {
-          console.log("Login falhou");
-          alert("Email ou senha incorretos.");
+          console.log("Resposta inesperada do servidor", usuarios);
+          alert("Erro ao tentar realizar o login.");
         }
       })
       .catch(error => {
@@ -59,11 +81,12 @@ btnEntrar.addEventListener("click", () => {
         alert("Erro ao tentar realizar o login.");
       });
   } else {
-      console.log("Login falhou");
-      alert("Por favor, insira um email válido.");
+    console.log("Login falhou");
+    alert("Por favor, insira um email válido.");
   }
 });
-//------------------------------------------------------------CADASTRO-----------------------------------------------------------------------------------
+
+// Cadastro de novo usuário
 btnCadastrar.addEventListener("click", () => {
   const nome = nomeCadastro.value;
   const email = emailCadastro.value;
@@ -80,21 +103,22 @@ btnCadastrar.addEventListener("click", () => {
   };
 
   // Envia os dados do novo usuário para o servidor
-  fetch('http://localhost:5000/usuarios', {
+  fetch('http://localhost:3000/usuarios', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
     },
     body: JSON.stringify(novoUsuario)
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log("Usuário cadastrado com sucesso:", data);
-    alert("Usuário cadastrado com sucesso!");
-    container.classList.remove("sign-up-mode"); // Volta para a tela de login
-  })
-  .catch(error => {
-    console.error("Erro ao cadastrar usuário:", error);
-    alert("Erro ao tentar cadastrar usuário.");
-  });
+    .then(response => response.json())
+    .then(data => {
+      console.log("Usuário cadastrado com sucesso:", data);
+      alert("Usuário cadastrado com sucesso!");
+      container.classList.remove("sign-up-mode"); // Volta para a tela de login
+    })
+    .catch(error => {
+      console.error("Erro ao cadastrar usuário:", error);
+      alert("Erro ao tentar cadastrar usuário.");
+    });
 });
