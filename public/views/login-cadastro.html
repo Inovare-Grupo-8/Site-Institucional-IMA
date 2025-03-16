@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="../css/login-e-cadastro.css" />
         <link rel="shortcut icon" type="image/svg+xml" href="../assets/imgs/Logo.svg" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
         <title>Login - Mãos Amigas</title>
 
@@ -26,7 +28,8 @@
                 </div>
                 <div class="input-field">
                   <i class="fas fa-lock"></i>
-                  <input type="password" id="input_senha_login" placeholder="Senha" required/>
+                  <input type="password" id="password_signup" placeholder="SENHA" required />
+                  <i class="fas fa-eye" id="togglePassword" style="cursor: pointer;"></i>
                 </div>
                 <input type="button" value="Entrar" class="btn solid" id="btn-entrar" />
                 <p class="social-text">-OU-</p>
@@ -48,14 +51,16 @@
                 </div>
                 <div class="input-field">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="SENHA" required/>
+                  <input type="password" id="password_signup" placeholder="SENHA" required />
+                  <i class="fas fa-eye" id="togglePassword" style="cursor: pointer;"></i>
                 </div>
+                
                 <div class="input-field">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="CPF" required/>
+                  <input type="text" id="cpf" placeholder="CPF" required maxlength="14"/>
                 </div>
                 <div class="input-field">
-                  <i class="fas fa-user"></i>
+                  <i class="fa-solid fa-calendar"></i>
                   <input type="date" placeholder="DATA DE NASCIMENTO" required/>
                 </div>
                 <input type="button" class="btn" value="CADASTRAR" id="btn-cadastrar"/>
@@ -97,7 +102,12 @@
             </div>
           </div>
         </div>
-    
+        <div id="modalErro" class="modal" style="display: none;">
+          <div class="modal-conteudo">
+              <p id="mensagemErro"></p>
+              <button class="fechar">Fechar</button>
+          </div>
+      </div>
         <script src="app.js"></script>
       </body>
     </html>

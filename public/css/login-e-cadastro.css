@@ -81,6 +81,7 @@ form.sign-in-form {
 }
 
 .input-field {
+  align-items: center;
   max-width: 380px;
   width: 100%;
   background-color: var(--Branco-Gelo);
@@ -94,11 +95,29 @@ form.sign-in-form {
 }
 
 .input-field i {
-  text-align: center;
-  line-height: 55px;
-  color: #acacac;
-  transition: 0.5s;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: var(--cinza);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  align-items: center;
+}
+
+.input-field i:hover {
+  color: var(--Laranja);
+}
+
+.input-field .fa-eye {
+  position: absolute;
+  margin-bottom: 10px;
+  right: 15px;
+}
+
+.input-field .fa-eye-slash
+{
+  position: absolute;
+  margin-bottom: 10px;
+
+  right: 15px;
 }
 
 .input-field input {
@@ -107,6 +126,8 @@ form.sign-in-form {
   border: 1px solid var(--cinza);
   background-color: var(--Branco-Gelo);
   border-radius: 5px;
+  flex: 1;
+  
 }
 
 .input-field input::placeholder {
@@ -320,6 +341,70 @@ form.sign-in-form {
 
 .container.sign-up-mode .right-panel {
   pointer-events: all;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-conteudo {
+  background-color: var(--Branco-Gelo);
+  margin: 15% auto;
+  padding: 20px;
+  border: 5px solid var(--Laranja);
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: larger;
+  width: 40%;
+  height: 20%;
+  position: relative;
+  display: flex;
+}
+
+.modal-conteudo button.fechar{
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: var(--Laranja);
+  color: var(--Branco-Gelo);
+  font-size: medium;
+ cursor: pointer;
+}
+
+.modal-conteudo button:hover{
+  background-color: var(--Laranja-escuro);
+  color: var(--Branco-Gelo);
+}
+
+.modal-conteudo p{
+  color: var(--Preto);
+}
+
+.fechar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (max-width: 870px) {
