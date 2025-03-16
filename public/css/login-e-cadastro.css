@@ -81,6 +81,7 @@ form.sign-in-form {
 }
 
 .input-field {
+  align-items: center;
   max-width: 380px;
   width: 100%;
   background-color: var(--Branco-Gelo);
@@ -94,11 +95,29 @@ form.sign-in-form {
 }
 
 .input-field i {
-  text-align: center;
-  line-height: 55px;
-  color: #acacac;
-  transition: 0.5s;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: var(--cinza);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  align-items: center;
+}
+
+.input-field i:hover {
+  color: var(--Laranja);
+}
+
+.input-field .fa-eye {
+  position: absolute;
+  margin-bottom: 10px;
+  right: 15px;
+}
+
+.input-field .fa-eye-slash
+{
+  position: absolute;
+  margin-bottom: 10px;
+
+  right: 15px;
 }
 
 .input-field input {
@@ -107,6 +126,8 @@ form.sign-in-form {
   border: 1px solid var(--cinza);
   background-color: var(--Branco-Gelo);
   border-radius: 5px;
+  flex: 1;
+  
 }
 
 .input-field input::placeholder {
