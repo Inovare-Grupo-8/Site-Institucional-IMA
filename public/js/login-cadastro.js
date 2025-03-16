@@ -182,3 +182,15 @@ btnCadastrar.addEventListener("click", (event) => {
             exibirModalErro("Erro ao tentar cadastrar usuário.");
         });
 });
+
+
+
+// Máscara para o campo de CPF
+document.getElementById('cpf').addEventListener('input', function (e) {
+    let value = e.target.value;
+    value = value.replace(/\D/g, ""); 
+    value = value.replace(/^(\d{3})(\d)/, "$1.$2"); 
+    value = value.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3"); 
+    value = value.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4"); 
+    e.target.value = value;
+  });
