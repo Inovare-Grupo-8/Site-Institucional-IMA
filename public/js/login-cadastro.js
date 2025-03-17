@@ -129,7 +129,7 @@ btnEntrar.addEventListener("click", () => {
 
                 if (usuario) {
                     console.log("Login realizado com sucesso");
-                    window.location.href = "../index.html";
+                    window.location.href = "bem-vindo.html";
                     alert("Login bem-sucedido!");
                 } else {
                     exibirModalErro("Email ou senha incorretos.");
@@ -176,6 +176,7 @@ btnCadastrar.addEventListener("click", (event) => {
         .then(data => {
             console.log("Usuário cadastrado com sucesso:", data);
             alert("Usuário cadastrado com sucesso!");
+            window.location.href = "login-cadastro.html";
             container.classList.remove("sign-up-mode");
         })
         .catch(error => {
