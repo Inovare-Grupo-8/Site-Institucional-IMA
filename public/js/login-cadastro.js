@@ -4,7 +4,7 @@ const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 const btnEntrar = document.querySelector("#btn-entrar");
 const btnCadastrar = document.querySelector("#btn-cadastrar");
-const senhaLogin = document.getElementById("input_senha_login");
+const senhaLogin = document.getElementById("senhaLogin");
 const emailLogin = document.getElementById("input_email_login");
 const nomeCadastro = document.querySelector('input[placeholder="NOME"]');
 const emailCadastro = document.querySelector('input[placeholder="EMAIL"]');
