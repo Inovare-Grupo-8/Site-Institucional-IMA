@@ -37,14 +37,16 @@ function validarEmailCadastro(email) {
 
 function validarSenhaCadastro(senha) {
     if (senha.length < 6) {
+        console.log("senha tem o tamanho de: "+senha.length);
         return 'A senha deve ter pelo menos 6 caracteres.';
     }
     return null;
 }
 
 function validarCPF(cpf) {
-  //Verifica se tem 11 dígitos
-    if (cpf.length !== 11) {
+  //Verifica se tem 11 dígitos + as pontuações da mascara
+    if (cpf.length !== 14) {
+        console.log("cpf tem o tamanho de: "+cpf.length);
         return 'Por favor, insira um CPF válido.';
     }
     return null;
@@ -63,13 +65,11 @@ function validarCadastro() {
     const cpf = cpfCadastro.value;
     const dataNascimento = dataNascimentoCadastro.value;
 
-    let erro = validarEmailCadastro(email);
-    if (erro) {
-        exibirModalErro(erro);
-        return false;
-    }
+    console.log("email: "+email);
+    console.log("senha: "+senha);
+    console.log("cpf: "+cpf);
 
-    erro = validarSenhaCadastro(senha);
+    let erro = validarEmailCadastro(email);
     if (erro) {
         exibirModalErro(erro);
         return false;
