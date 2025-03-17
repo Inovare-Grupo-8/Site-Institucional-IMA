@@ -8,7 +8,7 @@ const senhaLogin = document.getElementById("input_senha_login");
 const emailLogin = document.getElementById("input_email_login");
 const nomeCadastro = document.querySelector('input[placeholder="NOME"]');
 const emailCadastro = document.querySelector('input[placeholder="EMAIL"]');
-const senhaCadastro = document.querySelector('input[placeholder="SENHA"]');
+const senhaCadastro = document.getElementById("senhaCadastro");
 const cpfCadastro = document.querySelector('input[placeholder="CPF"]');
 const dataNascimentoCadastro = document.querySelector('input[placeholder="DATA DE NASCIMENTO"]');
 
