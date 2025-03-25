@@ -6,11 +6,11 @@ const btnEntrar = document.querySelector("#btn-entrar");
 const btnCadastrar = document.querySelector("#btn-cadastrar");
 const senhaLogin = document.getElementById("input_senha_login");
 const emailLogin = document.getElementById("input_email_login");
-const nomeCadastro = document.querySelector('input[placeholder="NOME"]');
-const emailCadastro = document.querySelector('input[placeholder="EMAIL"]');
-const senhaCadastro = document.querySelector('input[placeholder="SENHA"]');
-const cpfCadastro = document.querySelector('input[placeholder="CPF"]');
-const dataNascimentoCadastro = document.querySelector('input[placeholder="DATA DE NASCIMENTO"]');
+const nomeCadastro = document.getElementById("name_signup");
+const emailCadastro = document.getElementById("email_signup");
+const senhaCadastro = document.getElementById("password_signup");
+const cpfCadastro = document.getElementById("cpf_signup");
+const dataNascimentoCadastro = document.getElementById("birth_signup");
 
 // Elementos do modal
 const modalErro = document.getElementById('modalErro');
