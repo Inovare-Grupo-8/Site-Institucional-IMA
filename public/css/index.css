@@ -862,6 +862,11 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+
+  html{
+    width: 100vw;
+  }
+
   header {
     background-color: var(--Branco-Gelo);
     display: flex;
