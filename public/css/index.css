@@ -862,6 +862,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 
   header {
     background-color: var(--Branco-Gelo);
@@ -1227,22 +1231,22 @@ footer {
       margin-bottom: 15px;
     }
 
-    .contato-info{
+    .contato-info {
       padding-top: 30px;
       display: flex;
       gap: 30px;
     }
 
-    .contato-info .info-item h5{
+    .contato-info .info-item h5 {
       font-size: 1rem;
     }
 
-    .contato-info .info-item p{
+    .contato-info .info-item p {
       font-size: 0.8rem;
     }
 
     .contato-info .info-item img {
-     display: none;
+      display: none;
     }
   }
 }
