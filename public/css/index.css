@@ -863,16 +863,12 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-  html{
-    width: 100vw;
-  }
-
   header {
     background-color: var(--Branco-Gelo);
     display: flex;
     flex-direction: row;
-    padding: 15px;
-    width: 100%;
+    padding: 20px 30px;
+    width: 100vw;
     position: fixed;
     height: 10vh;
     z-index: 4;
