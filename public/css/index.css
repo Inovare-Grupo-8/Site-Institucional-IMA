@@ -1019,6 +1019,11 @@ footer {
       font-weight: 400;
     }
 
+    .quem-somos-text h1 {
+      text-align: center;
+      width: 80vw;
+    }
+
     .quem-somos-text p {
       width: 80vw;
       text-align: center;
