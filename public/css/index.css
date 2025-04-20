@@ -1,7 +1,7 @@
+html,
 body {
   overflow-x: hidden;
 }
-
 
 header {
   .tablet-note-nav {
@@ -1116,7 +1116,7 @@ footer {
   }
 
   .onda-top {
-    width: 130%;
+    width: 100vw;
     height: 20vh;
   }
 
@@ -1140,8 +1140,10 @@ footer {
 
   .onda-bottom {
     top: -10vh;
-    width: 160%;
+    width: 100vw;
     height: 25vh;
+    left: 0;
+    transform: rotate(0deg);
   }
 
   .servicos {
