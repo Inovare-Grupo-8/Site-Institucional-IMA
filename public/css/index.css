@@ -907,8 +907,8 @@ footer {
     .mobile-menu {
       position: fixed;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-      top: 75px;
-      left: -100%;
+      top: 68px;
+      left: -120%;
       height: 90vh;
       width: 100vw;
       background-color: var(--Branco-Gelo);
