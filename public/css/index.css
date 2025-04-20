@@ -863,11 +863,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
   header {
     background-color: var(--Branco-Gelo);
     display: flex;
@@ -878,6 +873,8 @@ footer {
     height: 10vh;
     z-index: 4;
     top: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
 
     .tablet-note-nav {
       display: none;
@@ -918,7 +915,6 @@ footer {
       padding: 20px;
       padding-bottom: 50px;
       z-index: 5;
-      overflow: hidden;
       transition: left 0.3s ease;
     }
 
@@ -1342,7 +1338,7 @@ footer {
       padding-bottom: 20px;
     }
 
-    .faq-item{
+    .faq-item {
       padding: 10px 10px;
     }
 
@@ -1373,11 +1369,11 @@ footer {
     display: none;
   }
 
-  .rodape-redes-sociais{
+  .rodape-redes-sociais {
     gap: 20px;
   }
 
-  .ultima-linha-rodape{
+  .ultima-linha-rodape {
     flex-direction: column;
     justify-content: center;
     align-items: center;
