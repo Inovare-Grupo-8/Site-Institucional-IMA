@@ -35,12 +35,3 @@ function menuShow() {
     content.classList.add("blurred-background");
   }
 }
-
-function removeEscuro() {
-  let menuMobile = document.querySelector(".mobile-menu");
-  let content = document.querySelector("main");
-
-  menuMobile.classList.remove("open");
-  document.querySelector(".icon").src = "assets/imgs/menu.svg";
-  content.classList.remove("blurred-background");
-}
