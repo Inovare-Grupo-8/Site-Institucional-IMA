@@ -1,3 +1,8 @@
+body {
+  overflow-x: hidden;
+}
+
+
 header {
   .tablet-note-nav {
     display: flex;
@@ -863,12 +868,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-
-  body {
-    overflow-x: hidden;
-  }
-  
-
   header {
     background-color: var(--Branco-Gelo);
     display: flex;
