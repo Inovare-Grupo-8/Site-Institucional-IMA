@@ -21,7 +21,7 @@
             <li><a href="#">HOME</a></li>
             <li><a href="#quem-somos">QUEM SOMOS</a></li>
             <li><a href="#voluntarios">VOLUNTÁRIOS</a></li>
-            <li><a href="#servicos">SERVIÇOS</a></li>
+            <li><a href="#entrando-servicos">SERVIÇOS</a></li>
             <li><a href="#contribua">CONTRIBUA</a></li>
             <li><a href="#contato">CONTATO</a></li>
           </ul>
@@ -38,15 +38,17 @@
       </div>
       <div class="mobile-menu">
         <ul class="nav-list">
-          <li class="nav-item" onclick="removeEscuro()"><a href="#home">HOME</a></li>
-          <li class="nav-item" onclick="removeEscuro()"><a href="#quem-somos">QUEM SOMOS</a></li>
-          <li class="nav-item" onclick="removeEscuro()"><a href="#voluntarios">VOLUNTÁRIOS</a></li>
-          <li class="nav-item" onclick="removeEscuro()"><a href="#servicos">SERVIÇOS</a></li>
-          <li class="nav-item" onclick="removeEscuro()"><a href="#contribua">CONTRIBUA</a></li>
-          <li class="nav-item" onclick="removeEscuro()"><a href="#contato">CONTATO</a></li>
+          <li class="nav-item" onclick="removeEscuro()"><a href="#home">Home</a></li>
+          <li class="nav-item" onclick="removeEscuro()"><a href="#quem-somos">Quem Somos</a></li>
+          <li class="nav-item" onclick="removeEscuro()"><a href="#voluntarios">Voluntários</a></li>
+          <li class="nav-item" onclick="removeEscuro()"><a href="#entrando-servicos">Serviços</a></li>
+          <li class="nav-item" onclick="removeEscuro()"><a href="#contribua">Contribua</a></li>
+          <li class="nav-item" onclick="removeEscuro()"><a href="#contato">Contato</a></li>
         </ul>
-        <button class="botao-doar" aria-label="Doar Agora">DOAR AGORA</button>
-        <button class="botao-login" onclick="login()" aria-label="Login">LOGIN</button>
+        <div class="mobile-menu-buttons">
+          <button class="botao-doar" aria-label="Doar Agora">DOAR AGORA</button>
+          <button class="botao-login" onclick="login()" aria-label="Login">LOGIN</button>
+        </div>
         </div>
       </div>
       </div>
@@ -101,7 +103,7 @@
       </button>
     </div>
   </section>
-  <div class="onda-bottom"></div>
+  <div class="onda-bottom" id="entrando-servicos"></div>
 
   <section id="servicos" class="servicos">
     <div class="servicos-text">
@@ -194,12 +196,15 @@
     <div class="parceiros-text">
       <h1>PARCEIROS</h1>
     </div>
-    <div class="image-parceiros">
-      <img src="assets/imgs/image 128.svg" alt="" />
-      <img src="assets/imgs/image 129.svg" alt="" />
+    <div class="slider">
+      <div class="image-parceiros">
+        <img src="assets/imgs/image 128.svg" alt="Parceiro 1" />
+        <img src="assets/imgs/image 129.svg" alt="Parceiro 2" />
+        <!-- Adicione mais imagens se quiser -->
+      </div>
     </div>
   </section>
-
+  
   <section id="contato" class="contato">
     <div class="contato-container">
       <div class="contato-form">
@@ -287,7 +292,7 @@
 
   <section class="perguntas-frequentes">
     <div class="container-faq">
-      <img src="assets/imgs/Man thinking about the question.svg" alt="" />
+      <img class="imagem-faq" src="assets/imgs/Man thinking about the question.svg" alt="" />
 
       <div class="faq-container">
         <div class="faq-header">PERGUNTAS FREQUENTES</div>

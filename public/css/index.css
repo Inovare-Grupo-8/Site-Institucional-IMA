@@ -3,6 +3,7 @@ header {
     display: flex;
     flex-direction: row;
     background-color: var(--Branco-Gelo);
+    align-items: center;
     padding: 15px;
     position: fixed;
     width: 100%;
@@ -149,6 +150,8 @@ header.scrolled {
 .quem-somos {
   display: flex;
   flex-direction: column;
+  padding-top: 10vh;
+  padding-bottom: 30px;
 
   .quem-somos-text {
     display: flex;
@@ -689,8 +692,6 @@ header.scrolled {
   .container-faq {
     margin-top: 10vh;
     margin-bottom: 10vh;
-    /* max-width: 200vw; */
-    /* max-height: 595px; */
     background-color: var(--Branco-Gelo);
     display: flex;
     flex-direction: row;
@@ -900,23 +901,24 @@ footer {
     }
 
     .logo {
-      width: 12%;
+      width: 15%;
     }
 
     .mobile-menu {
       position: fixed;
-      top: 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+      top: 68px;
       left: -100%;
-      height: 100vh;
-      width: 300px;
-      background-color: var(--Preto);
+      height: 90vh;
+      width: 100%;
+      background-color: var(--Branco-Gelo);
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      align-items: start;
       padding: 20px;
+      padding-bottom: 50px;
       z-index: 5;
-      overflow-y: hidden;
+      overflow: hidden;
       transition: left 0.3s ease;
     }
 
@@ -924,30 +926,59 @@ footer {
       left: 0;
     }
 
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+    }
+
     .mobile-menu ul {
       list-style: none;
       padding: 0;
       margin: 0;
-      width: 100%;
     }
 
-    .mobile-menu .nav-item {
+    .mobile-menu .nav-list .nav-item {
       margin: 15px 0;
       padding-left: 10px;
       text-align: left;
+      width: 100%;
     }
 
-    .mobile-menu .nav-item a {
+    .mobile-menu .nav-list .nav-item a {
       text-decoration: none;
       font-size: 18px;
       font-weight: 500;
-      color: #fff;
+      color: var(--Preto);
       transition: color 0.3s ease;
+      padding: 10px;
     }
 
     .mobile-menu-icon button {
       background-color: transparent;
       border: none;
+      cursor: pointer;
+    }
+
+    .mobile-menu-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .mobile-menu-icon button img {
+      width: 35px;
+      height: 35px;
+      filter: brightness(0) saturate(100%) invert(32%) sepia(89%) saturate(500%)
+        hue-rotate(290deg) brightness(90%) contrast(85%);
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .mobile-menu-icon button img:hover {
+      opacity: 1;
     }
 
     .mobile-menu-icon button img {
@@ -959,7 +990,7 @@ footer {
     }
 
     .botao-doar {
-      width: 10rem;
+      width: 100%;
       height: 2.5rem;
       border-radius: 20px;
       background-color: var(--Laranja);
@@ -975,7 +1006,7 @@ footer {
     }
 
     .botao-login {
-      width: 10rem;
+      width: 100%;
       height: 2.5rem;
       border-radius: 20px;
       background-color: var(--Branco-Gelo);
@@ -1017,7 +1048,6 @@ footer {
   .quem-somos {
     display: flex;
     flex-direction: column;
-    height: 85vh;
 
     .quem-somos-text {
       align-items: center;
@@ -1193,9 +1223,45 @@ footer {
     }
   }
 
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image-parceiros {
+    display: flex;
+    width: fit-content;
+    animation: slide 20s infinite;
+  }
+
+  .image-parceiros img {
+    width: 200px; /* ajuste como quiser */
+    margin: 0 10px;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(100px);
+    }
+    25% {
+      transform: translateX(-400px);
+    }
+    50% {
+      transform: translateX(100px);
+    }
+    75% {
+      transform: translateX(-400px);
+    }
+    100% {
+      transform: translateX(100px);
+    }
+  }
+
   .contato {
     display: flex;
     padding: 80px 100px;
+    padding-top: 15vh;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1248,5 +1314,74 @@ footer {
     .contato-info .info-item img {
       display: none;
     }
+  }
+
+  .perguntas-frequentes {
+    padding: 0px 20px;
+    height: 100vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    background-color: var(--Laranja);
+    justify-content: center;
+    align-items: center;
+
+    .container-faq {
+      width: 100%;
+      padding: 10px 10px;
+      border-radius: 20px;
+    }
+
+    .faq-container {
+      padding: 20px 10px;
+    }
+
+    .faq-header {
+      font-size: var(--tamanho-fonte-maior);
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .faq-item{
+      padding: 10px 10px;
+    }
+
+    .imagem-faq {
+      display: none;
+    }
+  }
+
+  .rodape_conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .logo_rodape {
+    width: 30%;
+    padding-bottom: 20px;
+  }
+
+  .colunas {
+    width: 80%;
+    gap: 40px;
+  }
+
+  .rodape-contribuir {
+    display: none;
+  }
+
+  .rodape-redes-sociais{
+    gap: 20px;
+  }
+
+  .ultima-linha-rodape{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
   }
 }
