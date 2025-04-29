@@ -4,13 +4,18 @@ const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 const btnEntrar = document.querySelector("#btn-entrar");
 const btnCadastrar = document.querySelector("#btn-cadastrar");
-const senhaLogin = document.getElementById("input_senha_login");
+const senhaLogin = document.getElementById("senhaLogin");
 const emailLogin = document.getElementById("input_email_login");
 const nomeCadastro = document.getElementById("name_signup");
 const emailCadastro = document.getElementById("email_signup");
 const senhaCadastro = document.getElementById("password_signup");
 const cpfCadastro = document.getElementById("cpf_signup");
 const dataNascimentoCadastro = document.getElementById("birth_signup");
+
+// Elementos do modal
+const modalErro = document.getElementById('modalErro');
+const mensagemErro = document.getElementById('mensagemErro');
+const fecharModal = document.querySelector('.fechar');
 
 // Elementos do modal
 const modalErro = document.getElementById('modalErro');
@@ -129,7 +134,9 @@ btnEntrar.addEventListener("click", () => {
 
                 if (usuario) {
                     console.log("Login realizado com sucesso");
+                  
                     window.location.href = "../index.html";
+
                     alert("Login bem-sucedido!");
                 } else {
                     exibirModalErro("Email ou senha incorretos.");
@@ -176,6 +183,7 @@ btnCadastrar.addEventListener("click", (event) => {
         .then(data => {
             console.log("Usuário cadastrado com sucesso:", data);
             alert("Usuário cadastrado com sucesso!");
+      
             container.classList.remove("sign-up-mode");
         })
         .catch(error => {

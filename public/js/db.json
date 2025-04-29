@@ -9,40 +9,12 @@
       "dataNascimento": "2000-01-01"
     },
     {
-      "id": "2800",
+      "id": "a75c",
       "nome": "Jhenifer",
-      "email": "jhenifer@gmail.com",
-      "senha": "123456",
-      "cpf": "12345678901",
-      "dataNascimento": "2000-01-01"
-    },
-    {
-      "id": "bdfa",
-      "email": "giovanna@example.com",
-      "senha": "123456"
-    },
-    {
-      "id": "86ae",
-      "email": "giovanna@example.com",
-      "senha": "123456"
-    },
-    {
-      "id": "206a",
-      "email": "giovanna@example.com",
-      "senha": "123456"
-    },
-    {
-      "id": "8c0e",
-      "email": "giovanna@example.com",
-      "senha": "123456"
-    },
-    {
-      "id": "9689",
-      "nome": "testandoOnline",
-      "email": "jhe@gmail.com",
-      "senha": "123456",
-      "cpf": "12345678901",
-      "dataNascimento": "2025-03-28"
+      "email": "anacleto@gmail.com",
+      "senha": "1098287873798",
+      "cpf": "098.765.432-11",
+      "dataNascimento": "2025-03-03"
     }
   ]
 }
