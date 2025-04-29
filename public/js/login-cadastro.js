@@ -6,11 +6,16 @@ const btnEntrar = document.querySelector("#btn-entrar");
 const btnCadastrar = document.querySelector("#btn-cadastrar");
 const senhaLogin = document.getElementById("senhaLogin");
 const emailLogin = document.getElementById("input_email_login");
-const nomeCadastro = document.querySelector('input[placeholder="NOME"]');
-const emailCadastro = document.querySelector('input[placeholder="EMAIL"]');
-const senhaCadastro = document.getElementById("senhaCadastro");
-const cpfCadastro = document.querySelector('input[placeholder="CPF"]');
-const dataNascimentoCadastro = document.querySelector('input[placeholder="DATA DE NASCIMENTO"]');
+const nomeCadastro = document.getElementById("name_signup");
+const emailCadastro = document.getElementById("email_signup");
+const senhaCadastro = document.getElementById("password_signup");
+const cpfCadastro = document.getElementById("cpf_signup");
+const dataNascimentoCadastro = document.getElementById("birth_signup");
+
+// Elementos do modal
+const modalErro = document.getElementById('modalErro');
+const mensagemErro = document.getElementById('mensagemErro');
+const fecharModal = document.querySelector('.fechar');
 
 // Elementos do modal
 const modalErro = document.getElementById('modalErro');
@@ -37,16 +42,14 @@ function validarEmailCadastro(email) {
 
 function validarSenhaCadastro(senha) {
     if (senha.length < 6) {
-        console.log("senha tem o tamanho de: "+senha.length);
         return 'A senha deve ter pelo menos 6 caracteres.';
     }
     return null;
 }
 
 function validarCPF(cpf) {
-  //Verifica se tem 11 dígitos + as pontuações da mascara
-    if (cpf.length !== 14) {
-        console.log("cpf tem o tamanho de: "+cpf.length);
+  //Verifica se tem 11 dígitos
+    if (cpf.length !== 11) {
         return 'Por favor, insira um CPF válido.';
     }
     return null;
@@ -65,11 +68,13 @@ function validarCadastro() {
     const cpf = cpfCadastro.value;
     const dataNascimento = dataNascimentoCadastro.value;
 
-    console.log("email: "+email);
-    console.log("senha: "+senha);
-    console.log("cpf: "+cpf);
-
     let erro = validarEmailCadastro(email);
+    if (erro) {
+        exibirModalErro(erro);
+        return false;
+    }
+
+    erro = validarSenhaCadastro(senha);
     if (erro) {
         exibirModalErro(erro);
         return false;
@@ -129,7 +134,9 @@ btnEntrar.addEventListener("click", () => {
 
                 if (usuario) {
                     console.log("Login realizado com sucesso");
-                    window.location.href = "bem-vindo.html";
+                  
+                    window.location.href = "../index.html";
+
                     alert("Login bem-sucedido!");
                 } else {
                     exibirModalErro("Email ou senha incorretos.");
@@ -176,7 +183,7 @@ btnCadastrar.addEventListener("click", (event) => {
         .then(data => {
             console.log("Usuário cadastrado com sucesso:", data);
             alert("Usuário cadastrado com sucesso!");
-            window.location.href = "login-cadastro.html";
+      
             container.classList.remove("sign-up-mode");
         })
         .catch(error => {

@@ -43,25 +43,29 @@
                 <h2 class="title">CADASTRAR</h2>
                 <div class="input-field">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="NOME" required/>
+                  <input type="text" placeholder="NOME" id="name_signuo" required/>
                 </div>
                 <div class="input-field">
                   <i class="fas fa-envelope"></i>
-                  <input type="email" placeholder="EMAIL" required />
+                  <input type="email" placeholder="EMAIL" id="email_signup" required />
                 </div>
                 <div class="input-field">
                   <i class="fas fa-lock"></i>
-                  <input type="password" id="senhaCadastro" placeholder="SENHA" required />
+
+                  <input type="password" id="password_signup" placeholder="SENHA" required />
+
                   <i class="fas fa-eye" id="togglePassword" style="cursor: pointer;"></i>
                 </div>
                 
                 <div class="input-field">
                   <i class="fas fa-user"></i>
-                  <input type="text" id="cpf" placeholder="CPF" required maxlength="14"/>
+
+                  <input type="text" id="cpf_signup" placeholder="CPF" required maxlength="14"/>
                 </div>
                 <div class="input-field">
                   <i class="fa-solid fa-calendar"></i>
-                  <input type="date" placeholder="DATA DE NASCIMENTO" required/>
+                  <input type="date" placeholder="DATA DE NASCIMENTO" id="birth_signup" required/>
+
                 </div>
                 <input type="button" class="btn" value="CADASTRAR" id="btn-cadastrar"/>
                 <p class="social-text">-OU-</p>

@@ -116,9 +116,15 @@ header.scrolled {
   .home-text {
     display: flex;
     flex-direction: column;
-    height: 50vw;
-    width: 25vw;
-    justify-content: center;
+    background:
+        linear-gradient(rgba(198, 1, 188, 0.5), rgba(49, 32, 188, 0.70)),
+        url('/assets/imgs/FotoFundoHome.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: start;
+    justify-content: flex-start;
+    padding-left: 7vw;
+    padding-top: 10vh;
 
     h1 {
       font-weight: bold;
