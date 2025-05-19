@@ -18,7 +18,7 @@ function voltarHome() {
 }
 
 function login() {
-  window.location.href = "../public/views/login-cadastro.html";
+  window.location.href = "http://10.18.33.92:3030/login";
 }
 
 function menuShow() {
