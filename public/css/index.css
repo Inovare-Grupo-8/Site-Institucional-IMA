@@ -245,7 +245,7 @@ header.scrolled {
   width: 100%;
   height: 30vh;
   margin: -1px;
-  z-index: 1;
+  z-index: 2;
   padding: 0;
   background: var(--Branco-Gelo);
   clip-path: polygon(
@@ -378,6 +378,7 @@ header.scrolled {
   width: 120%;
   height: 50vh;
   background: rgb(237, 71, 49, 0.65);
+  
   clip-path: polygon(
     100% 0%,
     0% 0%,
@@ -444,10 +445,85 @@ header.scrolled {
     100% 48.87%
   );
   transform: rotate(-3deg);
-  top: -17vh;
+  top: -5vh;
   left: -15%;
   right: 0;
+  
 }
+
+.explicativa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Branco-Gelo);
+}
+
+.explicativa-text{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    padding: 10vh;
+    color: var(--Preto);
+}
+
+.explicativa-container{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.valor-social-section, .multidisciplinar-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 50vh;
+  background-color: var(--Laranja);
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color var(--trasicao-botao) cubic-bezier(0.4, 0, 0.2, 1), 
+  transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+  box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.valor-social-section:hover,
+.multidisciplinar-section:hover {
+  background-color: var(--Laranja-escuro);
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.vs-no-click{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  img{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.multi-no-click{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  img{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
 
 .servicos {
   display: flex;
@@ -479,7 +555,6 @@ header.scrolled {
     align-items: center;
     font-weight: 400;
     padding: 10vh;
-    margin-top: -35vh;
   }
 
   .servicos-text h1 {
@@ -494,6 +569,7 @@ header.scrolled {
     padding-bottom: 0px;
   }
 
+  
   .icons {
     width: 80vw;
     display: grid;
