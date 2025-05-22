@@ -482,7 +482,7 @@ header.scrolled {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 35%;
+  width: 30%;
   height: 50vh;
   background-color: var(--Laranja);
   border-radius: 40px;
@@ -1407,6 +1407,18 @@ footer {
     background-color: var(--Laranja);
     justify-content: center;
     align-items: center;
+  }
+
+  .explicativa-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+.valor-social-section, .multidisciplinar-section{
+    width: 90%;
+    height: 40vh;
+    
+}
 
     .container-faq {
       width: 100%;
@@ -1467,4 +1479,4 @@ footer {
     text-align: center;
     gap: 10px;
   }
-}
+
