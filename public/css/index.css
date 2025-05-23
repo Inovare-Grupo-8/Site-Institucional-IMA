@@ -465,11 +465,12 @@ header.scrolled {
     font-weight: 400;
     padding: 10vh;
     color: var(--Preto);
+    margin-bottom: 0;
 }
 
 .explicativa-container{
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -477,26 +478,29 @@ header.scrolled {
   gap: 100px;
 }
 
-.valor-social-section, .multidisciplinar-section{
+.valor-social-section, .multidisciplinar-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%;
-  height: 50vh;
-  background-color: var(--Laranja);
+  width: 26%;
+  height: 40vh;
+  background-color: var(--Branco-Gelo);
+  border: 10px solid var(--Laranja);
   border-radius: 40px;
   cursor: pointer;
-  transition: background-color var(--trasicao-botao) cubic-bezier(0.4, 0, 0.2, 1), 
-  transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-  box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 
+    background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .valor-social-section:hover,
 .multidisciplinar-section:hover {
-  background-color: var(--Laranja-escuro);
-  transform: scale(1.05);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-color: var(--Laranja-escuro);
+  transform: scale(1.08);
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.18);
 }
 
 .vs-no-click{
@@ -504,10 +508,12 @@ header.scrolled {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 20px;
+  padding: 10px;
   img{
-    width: 250px;
-    height: 250px;
+    width: 42%;
+    height: 50%;
   }
 }
 
@@ -516,14 +522,18 @@ header.scrolled {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 20px;
+  padding: 10px;
   img{
-    width: 250px;
-    height: 250px;
+    width: 40%;
+    height: 52%;
   }
 }
 
-
+.valor-social-explicativa .multidisciplinar-explicativa{
+  margin: 10px;
+}
 
 .servicos {
   display: flex;
@@ -946,6 +956,13 @@ footer {
 .rodape-redes-sociais i {
   color: var(--Laranja);
 }
+
+@media(max-width: 1200px) {
+  .valor-social-section, .multidisciplinar-section{
+    width: 40%;
+  }
+  }
+
 
 @media screen and (max-width: 768px) {
   header {
