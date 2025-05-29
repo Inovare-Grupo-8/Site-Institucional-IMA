@@ -13,6 +13,34 @@ window.addEventListener("scroll", function () {
   }
 });
 
+const multi = document.getElementById("multi-no-click");
+multi.addEventListener("click", function () {
+  let imagemMulti = document.getElementById("multi-img");
+  let textMulti = document.getElementById("multi-text");
+
+  if( imagemMulti.style.display === "none") {
+    imagemMulti.style.display = "block";
+    textMulti.style.display = "none";
+  }else{
+    imagemMulti.style.display = "none";
+    textMulti.style.display = "block";
+  }
+});
+
+const valor = document.getElementById("vs-no-click");
+valor.addEventListener("click", function () {
+  let imagemValor = document.getElementById("valor-img");
+  let textValor = document.getElementById("valor-text");
+
+  if( imagemValor.style.display === "none") {
+    imagemValor.style.display = "block";
+    textValor.style.display = "none";
+  }else{
+    imagemValor.style.display = "none";
+    textValor.style.display = "block";
+  }
+});
+
 function voltarHome() {
   window.location.href = "index.html";
 }

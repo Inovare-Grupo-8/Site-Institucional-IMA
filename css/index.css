@@ -245,7 +245,7 @@ header.scrolled {
   width: 100%;
   height: 30vh;
   margin: -1px;
-  z-index: 1;
+  z-index: 2;
   padding: 0;
   background: var(--Branco-Gelo);
   clip-path: polygon(100% 0%,
@@ -440,9 +440,93 @@ header.scrolled {
       98.33% 50.72%,
       100% 48.87%);
   transform: rotate(-3deg);
-  top: -17vh;
+  top: -5vh;
   left: -15%;
   right: 0;
+}
+
+.explicativa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Branco-Gelo);
+}
+
+.explicativa-text{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    padding: 10vh;
+    color: var(--Preto);
+    margin-bottom: 0;
+}
+
+.explicativa-container{
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.valor-social-section, .multidisciplinar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 26%;
+  height: 40vh;
+  background-color: var(--Branco-Gelo);
+  border: 10px solid var(--Laranja);
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 
+    background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.valor-social-section:hover,
+.multidisciplinar-section:hover {
+  border-color: var(--Laranja-escuro);
+  transform: scale(1.08);
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.18);
+}
+
+.vs-no-click{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding: 10px;
+  img{
+    width: 42%;
+    height: 50%;
+  }
+}
+
+.multi-no-click{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding: 10px;
+  img{
+    width: 40%;
+    height: 52%;
+  }
+}
+
+.valor-social-explicativa .multidisciplinar-explicativa{
+  margin: 10px;
 }
 
 .servicos {
@@ -475,7 +559,6 @@ header.scrolled {
     align-items: center;
     font-weight: 400;
     padding: 10vh;
-    margin-top: -35vh;
   }
 
   .servicos-text h1 {
@@ -490,6 +573,7 @@ header.scrolled {
     padding-bottom: 0px;
   }
 
+  
   .icons {
     width: 80vw;
     display: grid;
@@ -867,6 +951,11 @@ footer {
   color: var(--Laranja);
 }
 
+@media(max-width: 1200px) {
+  .valor-social-section, .multidisciplinar-section{
+    width: 40%;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   header {
@@ -1334,6 +1423,18 @@ footer {
     background-color: var(--Laranja);
     justify-content: center;
     align-items: center;
+  }
+
+  .explicativa-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+.valor-social-section, .multidisciplinar-section{
+    width: 90%;
+    height: 40vh;
+    
+}
 
     .container-faq {
       width: 100%;
