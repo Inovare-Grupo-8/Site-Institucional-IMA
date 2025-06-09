@@ -46,7 +46,7 @@ function voltarHome() {
 }
 
 function login() {
-  window.location.href = "http://10.18.33.92:3030/login";
+  window.location.href = "http://localhost:3030/login";
 }
 
 function menuShow() {
