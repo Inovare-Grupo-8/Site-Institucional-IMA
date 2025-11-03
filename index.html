@@ -14,39 +14,41 @@
 <body>
   <header>
     <div class="note-nav">
-      <img src="assets/imgs/Logo.svg" onclick="voltarHome()" alt="Logo Mãos Amigas" />
+      <img src="assets/imgs/Logo.png" onclick="voltarHome()" alt="Logo Mãos Amigas" />
       <nav>
         <div class="menu">
           <ul class="nav-list">
-            <li><a href="#">HOME</a></li>
+            <li><a href="#home">HOME</a></li>
             <li><a href="#quem-somos">QUEM SOMOS</a></li>
-            <li><a href="#voluntarios">VOLUNTÁRIOS</a></li>
-            <li><a href="#entrando-servicos">SERVIÇOS</a></li>
-            <li><a href="#contribua">CONTRIBUA</a></li>
+            <li><a href="#impacto">NOSSO IMPACTO</a></li>
+            <li><a href="#servicos">SERVIÇOS</a></li>
             <li><a href="#contato">CONTATO</a></li>
+            <li><a href="view/solicitacao-voluntario.html">VOLUNTARIE-SE</a></li>
+            <li><a href="view/transparencia.html">TRANSPARÊNCIA</a></li>
           </ul>
         </div>
-        <button class="botao-doar" aria-label="Doar Agora">DOAR AGORA</button>
+          <button class="botao-doar" onclick="window.location.href='view/doacao.html'" aria-label="Doar Agora">DOAR AGORA</button>
         <button class="botao-login" onclick="login()" aria-label="Login">LOGIN</button>
       </nav>
     </div>
     <div class="mobile-nav">
       <div class="mobile-nav-container">
-        <img src="assets/imgs/Logo.svg" class="logo" onclick="voltarHome()" alt="Logo Mãos Amigas" />
+        <img src="assets/imgs/Logo.png" class="logo" onclick="voltarHome()" alt="Logo Mãos Amigas" />
         <div class="mobile-menu-icon">
           <button onclick="menuShow()"><img class="icon" src="assets/imgs/menu.svg"></button>
         </div>
         <div class="mobile-menu">
           <ul class="nav-list">
-            <li class="nav-item"><a href="#home">Home</a></li>
-            <li class="nav-item"><a href="#quem-somos">Quem Somos</a></li>
-            <li class="nav-item"><a href="#voluntarios">Voluntários</a></li>
-            <li class="nav-item"><a href="#entrando-servicos">Serviços</a></li>
-            <li class="nav-item"><a href="#contribua">Contribua</a></li>
-            <li class="nav-item"><a href="#contato">Contato</a></li>
+            <li class="nav-item"><a href="#home">HOME</a></li>
+            <li class="nav-item"><a href="#quem-somos">QUEM SOMOS</a></li>
+            <li class="nav-item"><a href="#impacto">NOSSO IMPACTO</a></li>
+            <li class="nav-item"><a href="#entrando-servicos">SERVIÇOS</a></li>
+            <li class="nav-item"><a href="#contato">CONTATO</a></li>
+            <li class="nav-item"><a href="view/solicitacao-voluntario.html">VOLUNTARIE-SE</a></li>
+            <li class="nav-item"><a href="view/transparencia.html">TRANSPARÊNCIA</a></li>
           </ul>
           <div class="mobile-menu-buttons">
-            <button class="botao-doar" aria-label="Doar Agora">DOAR AGORA</button>
+          <button class="botao-doar" onclick="window.location.href='view/doacao.html'" aria-label="Doar Agora">DOAR AGORA</button>
             <button class="botao-login" onclick="login()" aria-label="Login">LOGIN</button>
           </div>
         </div>
@@ -85,61 +87,135 @@
         <img class="menino-cabelo" src="assets/imgs/image 127.svg" alt="Menino segurando cabelo" />
       </div>
       <div class="logo-quem-somos">
-        <img class="logo" src="assets/imgs/image 125.svg" alt="Logo Mãos Amigas" />
+        <img class="logo" src="assets/imgs/logo-v2-vetor.svg" alt="Logo Mãos Amigas" />
       </div>
     </div>
   </section>
 
-  <div class="onda-top"></div>
-  <section id="contribua" class="contribua">
-    <div class="contribua-text">
-      <h1>QUERO DOAR</h1>
-      <p>
-        Faça sua doação para que possamos continuar nosso trabalho e dar
-        assistência à mais pessoas
-      </p>
-      <button class="botao-contribua" aria-label="Contribua">
-        DOAR AGORA
-      </button>
+  <section id="sobre-ima" class="sobre-ima">
+    <div class="sobre-ima-text">
+      <div class="sobre-ima-blocos">
+        <div class="bloco">
+          <h2>Missão</h2>
+          <p>
+            Promover o desenvolvimento humano e social por meio da solidariedade, do acolhimento e da educação,
+            oferecendo orientação e suporte multidisciplinar gratuito a pessoas em situação de vulnerabilidade.
+            Nosso propósito é devolver dignidade, autonomia e esperança, ajudando cada indivíduo a encontrar
+            caminhos possíveis para transformar a própria realidade e construir um futuro mais justo e igualitário.
+          </p>
+        </div>
+        <div class="bloco">
+          <h2>Visão</h2>
+          <p>
+            Ser reconhecido como uma referência nacional em acolhimento, orientação e engajamento voluntário,
+            unindo profissionais de diferentes áreas em torno de um propósito comum: Usar o conhecimento como
+            ferramenta de transformação social, ampliando o acesso à informação, fortalecendo redes de apoio e
+            promovendo inclusão com empatia e responsabilidade.
+          </p>
+        </div>
+      </div>
+      <div class="bloco-valores">
+        <h2>Valores</h2>
+        <div class="valores-grid">
+          <div class="valor-item"><span>Solidariedade</span></div>
+          <div class="valor-item"><span>Respeito</span></div>
+          <div class="valor-item"><span>Empoderamento</span></div>
+          <div class="valor-item"><span>Transparência</span></div>
+          <div class="valor-item"><span>Sustentabilidade</span></div>
+          <div class="valor-item"><span>Inovação</span></div>
+          <div class="valor-item"><span>Inclusão</span></div>
+        </div>
+      </div>
     </div>
   </section>
-  
-  <div class="onda-bottom" id="entrando-servicos"></div>
+
+  <section id="galeria" class="galeria">
+    <div class="galeria-container">
+      <div class="galeria-header">
+        <h1>Galeria</h1>
+      </div>
+      <div class="galeria-viewport">
+        <img id="galeria-img" class="galeria-img" src="assets/imgs/galeria/acao1.jpg" alt="Foto da ação 1" />
+        <button class="galeria-prev" aria-label="Imagem anterior">&#10094;</button>
+        <button class="galeria-next" aria-label="Próxima imagem">&#10095;</button>
+        <button class="galeria-toggle" id="galeria-toggle" aria-label="Pausar reprodução">❚❚</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="impacto" class="impacto">
+    <div class="impacto-container">
+      <div class="impacto-header">
+        <h1>Nosso impacto</h1>
+      </div>
+
+      <div class="impacto-metricas">
+        <div class="impacto-card">
+          <div class="impacto-numero">25+</div>
+          <div class="impacto-legenda">Comunidades visitadas</div>
+        </div>
+        <div class="impacto-card">
+          <div class="impacto-numero">1.200+</div>
+          <div class="impacto-legenda">Pessoas com mentoria profissional</div>
+        </div>
+        <div class="impacto-card">
+          <div class="impacto-numero">50+</div>
+          <div class="impacto-legenda">Projetos sociais realizados</div>
+        </div>
+        <div class="impacto-card">
+          <div class="impacto-numero">300+</div>
+          <div class="impacto-legenda">Voluntários engajados</div>
+        </div>
+      </div>
+
+      <p class="impacto-subtitulo">Conheça algumas das ações do IMA:</p>
+
+      <div class="impacto-acoes">
+        <div class="acao-card">
+          <h3>APOIO PSICOLÓGICO</h3>
+          <p>A gente é muito foda e deixa todo mundo feliz</p>
+        </div>
+        <div class="acao-card">
+          <h3>MENTORIA PROFISSIONAL</h3>
+          <p>A gente é muito foda e te ajuda a arranjar emprego</p>
+        </div>
+        <div class="acao-card">
+          <h3>AÇÕES EM COMUNIDADE</h3>
+          <p>Levamos alegria para a criançada das regiões periféricas</p>
+        </div>
+      </div>
+
+      <div class="impacto-barra"></div>
+    </div>
+  </section>
  
   
-  <section id= "explicativa" class="explicativa">
-    <div class="explicativa-text">
-      <h1>SEÇÃO EXPLICATIVA</h1>
-    <br>
-    <p>Clique nos ícones para entender os tipos de usuários</p>
-    </div>
-    <div class="explicativa-container">
-       <div class="valor-social-section">
-        <div id="vs-no-click" class="vs-no-click">
-          <h1>VALOR SOCIAL</h1>
-          <img src="./assets/imgs/user.png" alt="" id="valor-img" style=" display: block">
-          <p class="valor-social-explicativa" style="display: none;" id="valor-text">
-            O atendimento por valor social é um serviço que oferece
-            atendimento a pessoas com renda acima de 3 salários mínimos,
-            que não se enquadram nos critérios de vulnerabilidade, sujeitos a uma pequena 
-            porcentagem de taxa de atendimento.
-          </p>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="depoimentos">
+    <div class="depoimentos-container">
+      <h1>DEPOIMENTOS</h1>
+      <div class="depoimentos-linha"></div>
+      <div class="depoimentos-grid">
+        <div class="depo-card">
+          <p class="depo-quote">"Consegui orientação jurídica sem burocracia. Atendimento humano, claro e acessível."</p>
+          <p class="depo-author">- Ana Ribeiro</p>
         </div>
-       </div>
-       <div class="multidisciplinar-section">
-        <div id="multi-no-click" class="multi-no-click" >
-          <h1>MULTIDISCIPLINAR</h1>
-          <img src="./assets/imgs/cooperative.png" alt="" id="multi-img" style="display:block;">
-          <p class="multidisciplinar-explicativa" id="multi-text" style="display:none ;">
-            O atendimento multidisciplinar é um serviço que oferece
-            o atendimento a pessoas de baixa renda, com
-            dificuldades financeiras e/ou de saúde.
-          </p>
+        <div class="depo-card">
+          <p class="depo-quote">"As mentorias me ajudaram a organizar o currículo e conquistar meu emprego."</p>
+          <p class="depo-author">- Carlos Mendes</p>
         </div>
-       </div>
+        <div class="depo-card">
+          <p class="depo-quote">"Recebi apoio psicológico no momento certo. Equipe acolhedora e muito profissional."</p>
+          <p class="depo-author">- Júlia Ferreira</p>
+        </div>
+        <div class="depo-card">
+          <p class="depo-quote">"O atendimento contábil foi rápido e claro. Finalmente resolvi meu CPF sem dor de cabeça."</p>
+          <p class="depo-author">- Marcos Lima</p>
+        </div>
+      </div>
     </div>
-  </section> 
-  
+  </section>
 
   <section id="servicos" class="servicos"> 
     <div class="servicos-text">
@@ -226,7 +302,6 @@
     </button>
   </section>
 
- 
 
   <div class="onda-top"></div>
 
@@ -241,6 +316,33 @@
         <img src="assets/imgs/image 128.svg" alt="Parceiro 1" />
         <img src="assets/imgs/image 129.svg" alt="Parceiro 2" />
         <!-- Adicione mais imagens se quiser -->
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Onde Estamos -->
+  <section id="onde-estamos" class="onde-estamos">
+    <div class="onde-estamos-container">
+      <div class="onde-estamos-header">
+        <h1>ONDE ESTAMOS</h1>
+      </div>
+      <div class="onde-grid">
+        <div class="onde-card">
+          <h3 class="onde-card-title">TERRITÓRIO NACIONAL <span>(Atendimentos online)</span></h3>
+          <p class="onde-card-text">
+            Temos atendimento online de consultoria de carreira, apoio psicológico,
+            o que nos permite alcançar pessoas de todo o Brasil e impactar ainda mais vidas.
+          </p>
+        </div>
+        <div class="onde-card">
+          <h3 class="onde-card-title">ESTADO DE SÃO PAULO <span>(Ações presenciais)</span></h3>
+          <p class="onde-card-text">
+            Em atendimentos presenciais, como ações em comunidade, por exemplo,
+            atuamos em todo o estado de São Paulo.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -330,30 +432,36 @@
     </div>
   </section>
 
+  
+
   <section class="perguntas-frequentes">
     <div class="container-faq">
-      <img class="imagem-faq" src="assets/imgs/Man thinking about the question.svg" alt="" />
+      <img class="imagem-faq" src="assets/imgs/Man thinking about the question.svg" alt="Homem pensando" />
 
       <div class="faq-container">
         <div class="faq-header">PERGUNTAS FREQUENTES</div>
         <div class="faq-item">
           <div class="faq-question">O que vocês fazem? <i class="fa-solid fa-chevron-down"></i></div>
-          <div class="faq-answer"> Nós orientamos e direcionamos de forma gratuita, as pessoas que não têm acesso a
-            informação nas mais diversas áreas.</div>
+          <div class="faq-answer">Orientamos e conectamos pessoas aos seus direitos e a serviços públicos, <br>
+            com apoio de uma rede multidisciplinar de voluntários.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">É de graça? Não preciso pagar nada? <i class="fa-solid fa-chevron-down"></i></div>
-          <div class="faq-answer">Existe dois programas de atendimento no IMA, um totalmente gratuito para pessoas em
-            vulnerabilidade e por valor social.</div>
+          <div class="faq-question">Quanto custa o atendimento? <i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-answer">Existe dois programas de atendimento no IMA: um totalmente gratuito para pessoas <br>
+            
+    em situação de vulnerabilidade e o outro atendimento é cobrado valor social.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question">É presencial o atendimento? <i class="fa-solid fa-chevron-down"></i></div>
-          <div class="faq-answer">Atendemos online e para algumas especialidades na modalidade presencial.</div>
+          <div class="faq-answer">Atendemos majoritariamente online, mas também temos ações presenciais.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">Quais dias vcs atendem? <i class="fa-solid fa-chevron-down"></i></div>
-          <div class="faq-answer">A partir de 2025 iremos atender sem uma data fixada, teremos agenda mais flexível.
-          </div>
+          <div class="faq-question">Em quais dias vocês atendem? <i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-answer">As datas de atendimento são agendadas pela própria pessoa, por meio do nosso WhatsApp.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Como posso me tornar voluntário(a)? <i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-answer">Clique em "Voluntarie-se" no menu superior e preencha nosso formulário. Aguardamos você!</div>
         </div>
       </div>
     </div>
@@ -361,47 +469,57 @@
   <footer>
     <div class="rodape">
       <div class="rodape_conteudo">
-        <img class="logo_rodape" src="./assets/imgs/Logo.svg" onclick="voltarHome()" alt="Logo Mãos Amigas">
+        <img class="logo_rodape" src="./assets/imgs/Logo.png" onclick="voltarHome()" alt="Logo Mãos Amigas">
         <div class="colunas">
           <div class="coluna1">
             <span>
               <p>ACESSAR</p>
-              <a href="" class="button_rodape">Login</a>
-              <a href="" class="button_rodape">Cadastro</a>
+              <a href="#" class="button_rodape">LOGIN</a>
+              <a href="#" class="button_rodape">CADASTRO</a>
             </span>
           </div>
 
           <div class="coluna2">
             <span>
               <p>SOBRE</p>
-              <a href="" class="button_rodape">Quem somos</a>
-              <a href="" class="button_rodape">Projeto</a>
+              <a href="#quem-somos" class="button_rodape">QUEM SOMOS</a>
+              <a href="#impacto" class="button_rodape">NOSSO IMPACTO</a>
+              <a href="#servicos" class="button_rodape">SERVIÇOS</a>
+              <a href="view/transparencia.html" class="button_rodape">TRANSPARÊNCIA</a>
             </span>
           </div>
 
           <div class="coluna3">
             <span>
-              <p>SUPORTE</p>
-              <a href="" class="button_rodape">Contato</a>
+              <p>CONTATO</p>
+              <a href="#contato" class="button_rodape">CONTATO</a>
             </span>
           </div>
         </div>
         <div class="rodape-contribuir">
           <p>GOSTARIA DE CONTRIBUIR?</p>
-          <button>DOAR AGORA</button>
+            <button onclick="window.location.href='view/doacao.html'">DOAR AGORA</button>
         </div>
       </div>
       <div class="ultima-linha-rodape">
         <p>Termos & Condições | Políticas de Privacidade</p>
         <p>IMA - INSTITUTO MÃOS AMIGAS | CNPJ: 53.065.585/0001-94</p>
         <div class="rodape-redes-sociais">
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/sejamaosamigas/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/sejamaosamigas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/m%C3%A3os-amigas/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </div>
       </div>
     </div>
   </footer>
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://w.app/ima" class="whatsapp-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 </body>
 
 </html>

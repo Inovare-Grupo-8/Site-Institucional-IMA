@@ -1,6 +1,16 @@
 document.querySelectorAll(".faq-question").forEach((item) => {
   item.addEventListener("click", () => {
-    item.classList.toggle("active");
+    // Fecha todas as outras perguntas
+    document.querySelectorAll(".faq-question").forEach((q) => {
+      if (q !== item) {
+        q.classList.remove("active");
+        q.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // Alterna o estado da pergunta clicada
+    const isActive = item.classList.toggle("active");
+    item.setAttribute("aria-expanded", isActive ? "true" : "false");
   });
 });
 
@@ -13,33 +23,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-const multi = document.getElementById("multi-no-click");
-multi.addEventListener("click", function () {
-  let imagemMulti = document.getElementById("multi-img");
-  let textMulti = document.getElementById("multi-text");
-
-  if( imagemMulti.style.display === "none") {
-    imagemMulti.style.display = "block";
-    textMulti.style.display = "none";
-  }else{
-    imagemMulti.style.display = "none";
-    textMulti.style.display = "block";
-  }
-});
-
-const valor = document.getElementById("vs-no-click");
-valor.addEventListener("click", function () {
-  let imagemValor = document.getElementById("valor-img");
-  let textValor = document.getElementById("valor-text");
-
-  if( imagemValor.style.display === "none") {
-    imagemValor.style.display = "block";
-    textValor.style.display = "none";
-  }else{
-    imagemValor.style.display = "none";
-    textValor.style.display = "block";
-  }
-});
 
 function voltarHome() {
   window.location.href = "index.html";
@@ -63,3 +46,75 @@ function menuShow() {
     content.classList.add("blurred-background");
   }
 }
+
+// =============================
+// Galeria (slider simples)
+// =============================
+document.addEventListener("DOMContentLoaded", function () {
+  const imgEl = document.getElementById("galeria-img");
+  const prevBtn = document.querySelector(".galeria-prev");
+  const nextBtn = document.querySelector(".galeria-next");
+  const toggleBtn = document.getElementById("galeria-toggle");
+
+  if (!imgEl || !prevBtn || !nextBtn || !toggleBtn) return;
+
+  const imagens = [
+    "assets/imgs/galeria/acao1.jpg",
+    "assets/imgs/galeria/acao2.jpg",
+    "assets/imgs/galeria/acao3.jpg",
+    "assets/imgs/galeria/acao4.jpg",
+    "assets/imgs/galeria/acao5.jpg"
+  ];
+
+  let index = 0;
+  let playing = true;
+  let timer = null;
+
+  const render = () => {
+    imgEl.src = imagens[index];
+  };
+
+  const start = () => {
+    stop();
+    timer = setInterval(() => next(), 4000);
+    toggleBtn.textContent = "❚❚";
+    playing = true;
+  };
+
+  const stop = () => {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+    toggleBtn.textContent = "▶";
+    playing = false;
+  };
+
+  const next = () => {
+    index = (index + 1) % imagens.length;
+    render();
+  };
+
+  const prev = () => {
+    index = (index - 1 + imagens.length) % imagens.length;
+    render();
+  };
+
+  prevBtn.addEventListener("click", () => {
+    prev();
+    if (playing) start();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    next();
+    if (playing) start();
+  });
+
+  toggleBtn.addEventListener("click", () => {
+    if (playing) stop(); else start();
+  });
+
+  // Inicializa
+  render();
+  start();
+});

@@ -3,11 +3,15 @@
 
 
 :root {
-    --Laranja: #ED4231;
-    --Branco-Gelo: #EDF2FB;
+    /* Botões com rosa escuro (Magenta) */
+    --Laranja: var(--Magenta);
+    --Branco-Gelo: #F2F5FA;
+    --Branco-Gelo-Claro: #F7F9FC;
     --Preto: #262626;
-    --Laranja-escuro: #c93a2d;
+    /* Rosa escuro para hover e elementos de contraste */
+    --Laranja-escuro: var(--Magenta);
     --azulEscuro: #1A1466;
+    --Magenta: #C2185B;
     --cinza: #ADADAD;
     --bordas: 1px solid var(--Preto);
     --bordas-hover: 1px solid var(--Laranja);

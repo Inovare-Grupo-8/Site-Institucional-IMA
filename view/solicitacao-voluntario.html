@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/padrao.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/views.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/svg+xml"
+      href="assets/imgs/Logo.svg"
+    />
+    <title>Junte-se a nós | Mãos Amigas</title>
+  </head>
+  <body>
+    <header>
+      <div class="note-nav">
+        <img
+          src="../assets/imgs/Logo.png"
+          onclick="window.location.href='../index.html'"
+          alt="Logo Mãos Amigas"
+        />
+        <nav>
+          <div class="menu">
+            <ul class="nav-list">
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+              <li><a href="../index.html#impacto">NOSSO IMPACTO</a></li>
+              <li><a href="../index.html#servicos">SERVIÇOS</a></li>
+              <li><a href="../index.html#contato">CONTATO</a></li>
+              <li><a href="solicitacao-voluntario.html">VOLUNTARIE-SE</a></li>
+              <li><a href="transparencia.html">TRANSPARÊNCIA</a></li>
+            </ul>
+          </div>
+          <button class="botao-doar" onclick="window.location.href='doacao.html'" aria-label="Doar Agora">DOAR AGORA</button>
+          <button class="botao-login" onclick="login()" aria-label="Login">
+            LOGIN
+          </button>
+        </nav>
+      </div>
+      <div class="mobile-nav">
+        <div class="mobile-nav-container">
+          <img
+            src="../assets/imgs/Logo.sv"
+            class="logo"
+            onclick="window.location.href='../index.html'"
+            alt="Logo Mãos Amigas"
+          />
+          <div class="mobile-menu-icon">
+            <button onclick="menuShow()">
+              <img class="icon" src="../assets/imgs/menu.svg" />
+            </button>
+          </div>
+          <div class="mobile-menu">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="../index.html#home">HOME</a></li>
+              <li class="nav-item">
+                <a href="../index.html#quem-somos">QUEM SOMOS</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#impacto">NOSSO IMPACTO</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#servicos">SERVIÇOS</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#contato">CONTATO</a>
+              </li>
+              <li class="nav-item">
+                <a href="solicitacao-voluntario.html">VOLUNTARIE-SE</a>
+              </li>
+              <li class="nav-item">
+                <a href="transparencia.html">TRANSPARÊNCIA</a>
+              </li>
+            </ul>
+            <div class="mobile-menu-buttons">
+              <button class="botao-doar" onclick="window.location.href='doacao.html'" aria-label="Doar Agora">
+                DOAR AGORA
+              </button>
+              <button class="botao-login" onclick="login()" aria-label="Login">
+                LOGIN
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="pagina-voluntarios">
+        <div class="voluntarios-container">
+          <h1>Junte-se a nós</h1>
+          <div class="voluntarios-linha"></div>
+          <p class="voluntarios-intro">
+            Quer fazer parte do time que transforma milhares de vidas?
+            Inscreva-se abaixo e aguarde nosso retorno!
+          </p>
+
+          <form
+            class="vol-form"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="vol-grid">
+              <div class="input-group full">
+                <label for="nome">Nome completo *</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  required
+                  placeholder="Digite seu nome completo"
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="cpf">CPF *</label>
+                <input
+                  type="text"
+                  id="cpf"
+                  name="cpf"
+                  required
+                  placeholder="000.000.000-00"
+                  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="localizacao">Localização *</label>
+                <input
+                  type="text"
+                  id="localizacao"
+                  name="localizacao"
+                  required
+                  placeholder="Ex: São Paulo - SP"
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="whatsapp">WhatsApp *</label>
+                <input
+                  type="tel"
+                  id="whatsapp"
+                  name="whatsapp"
+                  required
+                  placeholder="(99) 99999-9999"
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="email">E-mail *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="seuemail@exemplo.com"
+                />
+              </div>
+
+              <div class="input-group full">
+                <label for="profissao">Profissão / Área de atuação *</label>
+                <input
+                  type="text"
+                  id="profissao"
+                  name="profissao"
+                  required
+                  placeholder="Ex: Designer, Engenheira..."
+                />
+              </div>
+
+              <div class="input-group full">
+                <label for="setor">Setor de interesse *</label>
+                <select id="setor" name="setor" required>
+                  <option value="" selected disabled>
+                    Selecione uma opção
+                  </option>
+                  <option>Juridica</option>
+                  <option>Psicologia</option>
+                  <option>Nutrição</option>
+                  <option>Quiropraxia</option>
+                  <option>Pediatria</option>
+                  <option>Financeiro</option>
+                  <option>Contábil</option>
+                  <option>Outros</option>
+                </select>
+              </div>
+
+              <div class="input-group full">
+                <label for="contribuicao"
+                  >Como você pode contribuir conosco? *</label
+                >
+                <textarea
+                  id="contribuicao"
+                  name="contribuicao"
+                  required
+                  placeholder="Conte um pouco sobre como você gostaria de impactar vidas."
+                  rows="5"
+                ></textarea>
+              </div>
+
+              <div class="input-group">
+                <label for="horas">Disponibilidade semanal (em horas) *</label>
+                <input
+                  type="number"
+                  id="horas"
+                  name="horas"
+                  min="1"
+                  placeholder="Ex: 6"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="disponibilidade">Disponibilidade *</label>
+                <select id="disponibilidade" name="disponibilidade" required>
+                  <option value="" selected disabled>Selecione</option>
+                  <option>Manhã</option>
+                  <option>Tarde</option>
+                  <option>Noite</option>
+                  <option>Finais de semana</option>
+                </select>
+              </div>
+
+              <div class="input-group full">
+                <label for="curriculo">Currículo (PDF, opcional)</label>
+                <input
+                  type="file"
+                  id="curriculo"
+                  name="curriculo"
+                  accept="application/pdf"
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="linkedin">LinkedIn (opcional)</label>
+                <input
+                  type="url"
+                  id="linkedin"
+                  name="linkedin"
+                  placeholder="https://linkedin.com/in/seu-perfil"
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="portfolio">Portfólio (opcional)</label>
+                <input
+                  type="url"
+                  id="portfolio"
+                  name="portfolio"
+                  placeholder="https://seuportfolio.com"
+                />
+              </div>
+            </div>
+
+            <div class="vol-submit">
+              <button type="submit">Enviar inscrição</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="rodape">
+        <div class="rodape_conteudo">
+          <img
+            class="logo_rodape"
+            src="../assets/imgs/Logo.png"
+            onclick="window.location.href='../index.html'"
+            alt="Logo Mãos Amigas"
+          />
+          <div class="colunas">
+            <div class="coluna1">
+              <span>
+                <p>ACESSAR</p>
+                <a href="#" class="button_rodape">LOGIN</a>
+                <a href="#" class="button_rodape">CADASTRO</a>
+              </span>
+            </div>
+
+            <div class="coluna2">
+              <span>
+                <p>SOBRE</p>
+                <a href="../index.html#quem-somos" class="button_rodape"
+                  >QUEM SOMOS</a
+                >
+                <a href="../index.html#impacto" class="button_rodape"
+                  >NOSSO IMPACTO</a
+                >
+                <a href="../index.html#servicos" class="button_rodape"
+                  >SERVIÇOS</a
+                >
+                <a href="transparencia.html" class="button_rodape"
+                  >TRANSPARÊNCIA</a
+                >
+              </span>
+            </div>
+
+            <div class="coluna3">
+              <span>
+                <p>CONTATO</p>
+                <a href="../index.html#contato" class="button_rodape"
+                  >CONTATO</a
+                >
+              </span>
+            </div>
+            
+          </div>
+          <div class="rodape-contribuir">
+            <p>GOSTARIA DE CONTRIBUIR?</p>
+            <button onclick="window.location.href='doacao.html'">DOAR AGORA</button>
+          </div>
+        </div>
+        <div class="ultima-linha-rodape">
+          <p>Termos & Condições | Políticas de Privacidade</p>
+          <p>IMA - INSTITUTO MÃOS AMIGAS | CNPJ: 53.065.585/0001-94</p>
+          <div class="rodape-redes-sociais">
+            <a href="https://www.facebook.com/sejamaosamigas/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sejamaosamigas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/m%C3%A3os-amigas/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://w.app/ima" class="whatsapp-btn" aria-label="WhatsApp"
+      ><i class="fa-brands fa-whatsapp"></i
+    ></a>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

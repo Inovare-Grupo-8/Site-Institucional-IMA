@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/padrao.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/views.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/svg+xml"
+      href="assets/imgs/Logo.svg"
+    />
+    <title>Transparência | Mãos Amigas</title>
+  </head>
+  <body>
+    <header>
+      <div class="note-nav">
+        <img
+          src="../assets/imgs/Logo.png"
+          onclick="window.location.href='../index.html'"
+          alt="Logo Mãos Amigas"
+        />
+        <nav>
+          <div class="menu">
+            <ul class="nav-list">
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+              <li><a href="../index.html#impacto">Nosso impacto</a></li>
+              <li><a href="../index.html#servicos">SERVIÇOS</a></li>
+              <li><a href="../index.html#contato">CONTATO</a></li>
+              <li><a href="solicitacao-voluntario.html">VOLUNTARIE-SE</a></li>
+              <li><a href="transparencia.html">TRANSPARÊNCIA</a></li>
+            </ul>
+          </div>
+          <button class="botao-doar" onclick="window.location.href='doacao.html'" aria-label="Doar Agora">DOAR AGORA</button>
+          <button class="botao-login" onclick="login()" aria-label="Login">
+            LOGIN
+          </button>
+        </nav>
+      </div>
+      <div class="mobile-nav">
+        <div class="mobile-nav-container">
+          <img
+            src="../assets/imgs/Logo.png"
+            class="logo"
+            onclick="window.location.href='../index.html'"
+            alt="Logo Mãos Amigas"
+          />
+          <div class="mobile-menu-icon">
+            <button onclick="menuShow()">
+              <img class="icon" src="../assets/imgs/menu.svg" />
+            </button>
+          </div>
+          <div class="mobile-menu">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="../index.html#home">HOME</a></li>
+              <li class="nav-item">
+                <a href="../index.html#quem-somos">QUEM SOMOS</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#impacto">NOSSO IMPACTO</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#servicos">SERVIÇOS</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#contato">CONTATO</a>
+              </li>
+              <li class="nav-item">
+                <a href="solicitacao-voluntario.html">VOLUNTARIE-SE</a>
+              </li>
+              <li class="nav-item">
+                <a href="transparencia.html">TRANSPARÊNCIA</a>
+              </li>
+            </ul>
+            <div class="mobile-menu-buttons">
+              <button class="botao-doar" onclick="window.location.href='doacao.html'" aria-label="Doar Agora">
+                DOAR AGORA
+              </button>
+              <button class="botao-login" onclick="login()" aria-label="Login">
+                LOGIN
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="pagina-transparencia">
+        <div class="transparencia-container">
+          <h1>Relatórios anuais</h1>
+          <div class="transparencia-linha"></div>
+          <p class="transparencia-intro">
+            Aqui você pode consultar os relatórios de transparência do Instituto
+            Mãos Amigas. Selecione o ano desejado para fazer download do
+            relatório.
+          </p>
+
+          <!-- Filtro e busca de relatórios por ano -->
+          <div class="transparencia-filtro">
+            <label for="filtro-ordem" class="transp-label">Ordenar:</label>
+            <select
+              id="filtro-ordem"
+              aria-label="Ordenar relatórios"
+              class="transp-input"
+            >
+              <option value="desc" selected>Mais novo → Mais antigo</option>
+              <option value="asc">Mais antigo → Mais novo</option>
+            </select>
+
+            <label for="filtro-ano" class="transp-label">Buscar por ano:</label>
+            <input
+              id="filtro-ano"
+              type="number"
+              min="1900"
+              max="2100"
+              placeholder="Ex: 2024"
+              class="transp-input transp-input-ano"
+              aria-label="Buscar relatório por ano"
+            />
+            <button id="btn-buscar" class="transp-btn primario">Buscar</button>
+            <button id="btn-limpar" class="transp-btn secundario">
+              Limpar
+            </button>
+          </div>
+
+          <div class="relatorios-grid">
+            <a
+              class="relatorio-card"
+              data-year="2023"
+              href="../assets/pdfs/relatório_IMA_2023.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="relatorio-card-content">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span class="relatorio-ano">2023</span>
+              </div>
+            </a>
+            <a
+              class="relatorio-card"
+              data-year="2024"
+              href="../assets/pdfs/relatório_IMA_2024.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="relatorio-card-content">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span class="relatorio-ano">2024</span>
+              </div>
+            </a>
+            <a
+              class="relatorio-card"
+              data-year="2025"
+              href="../assets/pdfs/relatório_IMA_2025.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="relatorio-card-content">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span class="relatorio-ano">2025</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="rodape">
+        <div class="rodape_conteudo">
+          <img
+            class="logo_rodape"
+            src="../assets/imgs/Logo.png"
+            onclick="window.location.href='../index.html'"
+            alt="Logo Mãos Amigas"
+          />
+          <div class="colunas">
+            <div class="coluna1">
+              <span>
+                <p>ACESSAR</p>
+                <a href="#" class="button_rodape">LOGIN</a>
+                <a href="#" class="button_rodape">CADASTRO</a>
+              </span>
+            </div>
+
+            <div class="coluna2">
+              <span>
+                <p>SOBRE</p>
+                <a href="../index.html#quem-somos" class="button_rodape"
+                  >QUEM SOMOS</a
+                >
+                <a href="../index.html#impacto" class="button_rodape"
+                  >NOSSO IMPACTO</a
+                >
+                <a href="../index.html#servicos" class="button_rodape"
+                  >SERVIÇOS</a
+                >
+                <a href="transparencia.html" class="button_rodape"
+                  >TRANSPARÊNCIA</a
+                >
+              </span>
+            </div>
+
+            <div class="coluna3">
+              <span>
+                <p>CONTATO</p>
+                <a href="../index.html#contato" class="button_rodape"
+                  >CONTATO</a
+                >
+              </span>
+            </div>
+            
+          </div>
+          <div class="rodape-contribuir">
+            <p>GOSTARIA DE CONTRIBUIR?</p>
+            <button onclick="window.location.href='doacao.html'">DOAR AGORA</button>
+          </div>
+        </div>
+        <div class="ultima-linha-rodape">
+          <p>Termos & Condições | Políticas de Privacidade</p>
+          <p>IMA - INSTITUTO MÃOS AMIGAS | CNPJ: 53.065.585/0001-94</p>
+          <div class="rodape-redes-sociais">
+            <a href="https://www.facebook.com/sejamaosamigas/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sejamaosamigas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/m%C3%A3os-amigas/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://w.app/ima" class="whatsapp-btn" aria-label="WhatsApp"
+      ><i class="fa-brands fa-whatsapp"></i
+    ></a>
+    <script>
+      (function () {
+        const grid = document.querySelector(".relatorios-grid");
+        const cards = Array.from(grid.querySelectorAll(".relatorio-card"));
+        const selectOrdem = document.getElementById("filtro-ordem");
+        const inputAno = document.getElementById("filtro-ano");
+        const btnBuscar = document.getElementById("btn-buscar");
+        const btnLimpar = document.getElementById("btn-limpar");
+
+        function sortCards(order) {
+          const sorted = cards.slice().sort((a, b) => {
+            const ay = parseInt(a.dataset.year, 10);
+            const by = parseInt(b.dataset.year, 10);
+            return order === "asc" ? ay - by : by - ay;
+          });
+          grid.innerHTML = "";
+          sorted.forEach((c) => grid.appendChild(c));
+        }
+
+        function filterByYear(year) {
+          const target = parseInt(year, 10);
+          cards.forEach((c) => {
+            const y = parseInt(c.dataset.year, 10);
+            c.style.display = !year || y === target ? "block" : "none";
+          });
+        }
+
+        selectOrdem.addEventListener("change", () =>
+          sortCards(selectOrdem.value)
+        );
+        inputAno.addEventListener("input", () => filterByYear(inputAno.value));
+        btnBuscar.addEventListener("click", () => filterByYear(inputAno.value));
+        btnLimpar.addEventListener("click", () => {
+          inputAno.value = "";
+          filterByYear("");
+        });
+
+        // inicializa com mais novo → mais antigo
+        sortCards("desc");
+      })();
+    </script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

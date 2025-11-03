@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/padrao.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/views.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" type="image/svg+xml" href="assets/imgs/Logo.svg" />
+    <title>Doar Agora | Mãos Amigas</title>
+  </head>
+  <body>
+    <header>
+      <div class="note-nav">
+        <img
+          src="../assets/imgs/Logo.png"
+          onclick="window.location.href='../index.html'"
+          alt="Logo Mãos Amigas"
+        />
+        <nav>
+          <div class="menu">
+            <ul class="nav-list">
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+              <li><a href="../index.html#impacto">Nosso impacto</a></li>
+              <li><a href="../index.html#servicos">SERVIÇOS</a></li>
+              <li><a href="../index.html#contato">CONTATO</a></li>
+              <li><a href="solicitacao-voluntario.html">VOLUNTARIE-SE</a></li>
+              <li><a href="transparencia.html">TRANSPARÊNCIA</a></li>
+            </ul>
+          </div>
+          <button class="botao-doar" onclick="window.location.href='doacao.html'" aria-label="Doar Agora">DOAR AGORA</button>
+          <button class="botao-login" onclick="login()" aria-label="Login">LOGIN</button>
+        </nav>
+      </div>
+      <div class="mobile-nav">
+        <div class="mobile-nav-container">
+          <img
+            src="../assets/imgs/Logo.png"
+            class="logo"
+            onclick="window.location.href='../index.html'"
+            alt="Logo Mãos Amigas"
+          />
+          <div class="mobile-menu-icon">
+            <button onclick="menuShow()">
+              <img class="icon" src="../assets/imgs/menu.svg" />
+            </button>
+          </div>
+          <div class="mobile-menu">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="../index.html#home">HOME</a></li>
+              <li class="nav-item"><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+              <li class="nav-item"><a href="../index.html#impacto">NOSSO IMPACTO</a></li>
+              <li class="nav-item"><a href="../index.html#servicos">SERVIÇOS</a></li>
+              <li class="nav-item"><a href="../index.html#contato">CONTATO</a></li>
+              <li class="nav-item"><a href="solicitacao-voluntario.html">VOLUNTARIE-SE</a></li>
+              <li class="nav-item"><a href="transparencia.html">TRANSPARÊNCIA</a></li>
+            </ul>
+            <div class="mobile-menu-buttons">
+              <button class="botao-doar" onclick="window.location.href='doacao.html'" aria-label="Doar Agora">DOAR AGORA</button>
+              <button class="botao-login" onclick="login()" aria-label="Login">LOGIN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="pagina-doacao">
+        <div class="doacao-container">
+          <h1>Faça sua doação</h1>
+          <p class="doacao-intro">
+            Escolha um dos valores abaixo ou insira o valor desejado:
+          </p>
+
+          <div class="valor-grid" role="group" aria-label="Valores sugeridos">
+            <button class="valor-btn" data-valor="10">R$10</button>
+            <button class="valor-btn" data-valor="25">R$25</button>
+            <button class="valor-btn" data-valor="50">R$50</button>
+            <button class="valor-btn" data-valor="100">R$100</button>
+            <button class="valor-btn" data-valor="200">R$200</button>
+          </div>
+
+          <div class="doacao-form">
+            <label for="valor-final">Valor final (R$):</label>
+            <input type="number" id="valor-final" min="1" step="1" value="0" aria-label="Valor final da doação" />
+          </div>
+
+          <div class="pagamento-opcoes">
+            <a class="paypal-btn" href="#" aria-label="Doar com PayPal">PayPal <span>Doar</span></a>
+            <a class="cartao-btn" href="#" aria-label="Doar com cartão">
+              <i class="fa-regular fa-credit-card"></i>
+              <span>Cartão de Débito ou Crédito</span>
+            </a>
+            <div class="powered-paypal">Powered by <strong>PayPal</strong></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="rodape">
+        <div class="rodape_conteudo">
+          <img
+            class="logo_rodape"
+            src="../assets/imgs/Logo.png"
+            onclick="window.location.href='../index.html'"
+            alt="Logo Mãos Amigas"
+          />
+          <div class="colunas">
+            <div class="coluna1">
+              <span>
+                <p>ACESSAR</p>
+                <a href="#" class="button_rodape">LOGIN</a>
+                <a href="#" class="button_rodape">CADASTRO</a>
+              </span>
+            </div>
+
+            <div class="coluna2">
+              <span>
+                <p>SOBRE</p>
+                <a href="../index.html#quem-somos" class="button_rodape">QUEM SOMOS</a>
+                <a href="../index.html#impacto" class="button_rodape">NOSSO IMPACTO</a>
+                <a href="../index.html#servicos" class="button_rodape">SERVIÇOS</a>
+                <a href="transparencia.html" class="button_rodape">TRANSPARÊNCIA</a>
+              </span>
+            </div>
+
+            <div class="coluna3">
+              <span>
+                <p>CONTATO</p>
+                <a href="../index.html#contato" class="button_rodape">CONTATO</a>
+              </span>
+            </div>
+          </div>
+          <div class="rodape-contribuir">
+            <p>GOSTARIA DE CONTRIBUIR?</p>
+            <button onclick="window.location.href='doacao.html'">DOAR AGORA</button>
+          </div>
+        </div>
+        <div class="ultima-linha-rodape">
+          <p>Termos & Condições | Políticas de Privacidade</p>
+          <p>IMA - INSTITUTO MÃOS AMIGAS | CNPJ: 53.065.585/0001-94</p>
+          <div class="rodape-redes-sociais">
+            <a href="https://www.facebook.com/sejamaosamigas/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sejamaosamigas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/m%C3%A3os-amigas/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="https://w.app/ima" class="whatsapp-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <script>
+      (function() {
+        const buttons = document.querySelectorAll('.valor-btn');
+        const input = document.getElementById('valor-final');
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const v = parseInt(btn.dataset.valor, 10);
+            input.value = isNaN(v) ? 0 : v;
+          });
+        });
+        // Placeholders for real integration
+        const paypal = document.querySelector('.paypal-btn');
+        const cartao = document.querySelector('.cartao-btn');
+        paypal.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Integração com PayPal pendente. Valor selecionado: R$ ' + (input.value || 0));
+        });
+        cartao.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Integração com cartão pendente. Valor selecionado: R$ ' + (input.value || 0));
+        });
+      })();
+    </script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
