@@ -837,21 +837,21 @@ header .mobile-nav .logo {
     margin-bottom: 5px;
   }
 
-.contato-form input,
-.contato-form textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid var(--Preto);
-  background-color: var(--Branco-Gelo-Claro);
-  border-radius: 5px;
-}
+  .contato-form input,
+  .contato-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--Preto);
+    background-color: var(--Branco-Gelo-Claro);
+    border-radius: 5px;
+  }
 
-.contato-form input:focus,
-.contato-form textarea:focus {
-  outline: none;
-  border-color: var(--Preto);
-  box-shadow: 0 0 0 3px rgba(38, 38, 38, 0.15);
-}
+  .contato-form input:focus,
+  .contato-form textarea:focus {
+    outline: none;
+    border-color: var(--Preto);
+    box-shadow: 0 0 0 3px rgba(38, 38, 38, 0.15);
+  }
 
   .contato-form button {
     padding: 10px;
@@ -1024,7 +1024,7 @@ footer {
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 6px; /* reduzir espaço entre título e itens */
-  line-height: 1.3;    /* altura de linha mais compacta nos títulos */
+  line-height: 1.3; /* altura de linha mais compacta nos títulos */
   text-transform: uppercase;
 }
 
@@ -1039,7 +1039,7 @@ footer {
   display: block;
   text-transform: uppercase; /* padroniza caixa */
   line-height: 1.3; /* altura de linha mais compacta */
-  margin: 2px 0;    /* reduzir distância vertical entre itens */
+  margin: 2px 0; /* reduzir distância vertical entre itens */
 }
 
 .colunas a:hover {
@@ -1180,7 +1180,7 @@ footer {
   color: var(--Preto);
   background: #ffffff; /* restaurar cartões claros */
   border-left: 10px solid var(--Magenta);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
 }
 
 .depo-quote {

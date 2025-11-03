@@ -173,7 +173,7 @@ input[type="file"]#curriculo:focus {
   align-items: center;
   /* Mais espaço no desktop para não "comer" o título sob o header */
   padding: 14vh 0 6vh;
-  background-color: var(--Branco-Gelo-Claro);
+  background-color: var(--Branco-Gelo);
 }
 
 .voluntarios-container {
@@ -276,18 +276,32 @@ input[type="file"]#curriculo:focus {
   background-color: var(--Branco-Gelo);
 }
 
-.doacao-container { width: 80vw; margin: 0 auto; }
+.doacao-container {
+  width: 80vw;
+  margin: 0 auto;
+}
 .doacao-container h1 {
   font-weight: bold;
   color: var(--Preto);
   text-transform: uppercase;
   text-align: left;
 }
-.doacao-linha { width: 100%; height: 2px; background: var(--Magenta); margin: 10px 0 24px; }
-.doacao-intro { color: var(--Preto); margin-bottom: 16px; }
+.doacao-linha {
+  width: 100%;
+  height: 2px;
+  background: var(--Magenta);
+  margin: 10px 0 24px;
+}
+.doacao-intro {
+  color: var(--Preto);
+  margin-bottom: 16px;
+}
 
 .valor-grid {
-  display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 .valor-btn {
   padding: 10px 16px;
@@ -298,28 +312,71 @@ input[type="file"]#curriculo:focus {
   border: 2px solid var(--Magenta);
   cursor: pointer;
 }
-.valor-btn:hover { background: rgba(194, 24, 91, 0.08); }
+.valor-btn:hover {
+  background: rgba(194, 24, 91, 0.08);
+}
 
-.doacao-form { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
-.doacao-form label { color: var(--Preto); font-weight: 600; }
+.doacao-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.doacao-form label {
+  color: var(--Preto);
+  font-weight: 600;
+}
 .doacao-form input {
-  padding: 10px 12px; border-radius: 10px; border: 1px solid var(--Preto);
-  background: var(--Branco-Gelo-Claro); color: var(--Preto); width: 160px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--Preto);
+  background: var(--Branco-Gelo-Claro);
+  color: var(--Preto);
+  width: 160px;
 }
 
-.pagamento-opcoes { display: flex; flex-direction: column; gap: 12px; max-width: 520px; }
+.pagamento-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 520px;
+}
 .paypal-btn {
-  display: inline-block; text-align: center; padding: 12px; border-radius: 10px;
-  background: #0070ba; color: #fff; font-weight: 700; text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: #0070ba;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
 }
-.paypal-btn span { font-weight: 600; }
+.paypal-btn span {
+  font-weight: 600;
+}
 .cartao-btn {
-  display: flex; align-items: center; gap: 10px; justify-content: center; padding: 12px;
-  border-radius: 10px; background: #2c2e2f; color: #fff; text-decoration: none; font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: #2c2e2f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
 }
-.powered-paypal { font-size: 12px; color: var(--Preto); opacity: 0.8; }
+.powered-paypal {
+  font-size: 12px;
+  color: var(--Preto);
+  opacity: 0.8;
+}
 
 @media screen and (max-width: 1024px) {
-  .pagina-doacao { padding-top: 10vh; }
-  .doacao-container { width: 90vw; }
+  .pagina-doacao {
+    padding-top: 10vh;
+  }
+  .doacao-container {
+    width: 90vw;
+  }
 }
