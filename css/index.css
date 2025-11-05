@@ -301,12 +301,19 @@ header .mobile-nav .logo {
   height: 100%;
 }
 
+/* Empilhar Missão e Visão no mobile */
+@media screen and (max-width: 1024px) {
+  .sobre-ima-blocos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 .valores-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 6px;
-  column-gap: 10px;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px;
   padding: 10px 0 0;
   justify-items: stretch;
 }
@@ -343,29 +350,41 @@ header .mobile-nav .logo {
 
 .valor-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  color: var(--Preto);
-  padding: 8px 14px 12px;
-  font-weight: 500;
-  background-color: transparent;
-  border-radius: 12px;
-  border: none;
-  transition: transform 0.3s ease;
-  width: 100%;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  color: var(--Magenta);
+  padding: 20px;
+  font-weight: 700;
+  background-color: var(--Branco-Gelo-Claro);
+  border-radius: 20px;
+  border: 2px solid var(--Magenta);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  min-height: 140px;
   box-sizing: border-box;
 }
 
-.valor-item::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--Magenta);
+.valor-item i {
+  font-size: 28px;
+  color: var(--Magenta);
+}
+
+.valor-item span {
+  color: var(--Magenta);
 }
 
 .valor-item:hover {
   transform: translateY(-2px);
+  background-color: var(--Magenta);
+  color: var(--Branco-Gelo);
+  box-shadow: 0 6px 18px rgba(194, 24, 91, 0.25);
+}
+
+.valor-item:hover i,
+.valor-item:hover span {
+  color: var(--Branco-Gelo);
 }
 
 /* Espaço e sombra acima da seção Valores */
@@ -383,20 +402,20 @@ header .mobile-nav .logo {
 
 @media (max-width: 1200px) {
   .valores-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media screen and (max-width: 1024px) {
   .valores-grid {
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 768px) {
   .valores-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -905,7 +924,7 @@ header .mobile-nav .logo {
   background-color: var(--Magenta);
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 
   img {
     height: 50vh;
@@ -915,22 +934,23 @@ header .mobile-nav .logo {
   }
 
   .container-faq {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
     background-color: var(--Branco-Gelo-Claro);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
+    min-height: 100vh;
   }
 
   .faq-container {
     background-color: var(--Branco-Gelo-Claro);
     width: 100%;
-    padding: 50px 10vh;
-    height: 60vh;
-    overflow-y: hidden;
+    padding: 40px 6vh;
+    height: auto;
+    overflow-y: visible;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     border-radius: 10px;
@@ -940,7 +960,7 @@ header .mobile-nav .logo {
     text-align: center;
     font-size: var(--tamanho-fonte-maior);
     font-weight: bold;
-    margin-bottom: 55px;
+    margin-bottom: 20px;
   }
 
   .faq-item {
@@ -1015,7 +1035,7 @@ footer {
   width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 10px;
   margin: 0 auto; /* centraliza o bloco de colunas no container */
   justify-items: center; /* alinha cada coluna ao centro do grid */
 }
@@ -1649,10 +1669,12 @@ footer {
   .quem-somos {
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
 
     .quem-somos-text {
       align-items: center;
       font-weight: 400;
+      padding: 0 4vh 8px;
     }
 
     .quem-somos-text h1 {
@@ -1669,46 +1691,41 @@ footer {
     .quem-somos-container {
       position: relative;
       width: 100%;
-      height: 50vh;
+      height: auto;
       display: flex;
       align-items: center;
       justify-content: space-around;
       padding: 0px;
+      margin-top: 10px;
     }
 
     .images-quem-somos {
       position: relative;
-      width: 280px;
-      height: 280px;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 12px auto 16px;
     }
 
     .images-quem-somos img {
-      position: absolute;
+      position: static;
       border-radius: 10px;
       object-fit: cover;
+      width: 42vw;
+      max-width: 220px;
+      height: auto;
     }
 
-    .enfermeira {
-      width: 189px;
-      height: 189px;
-      left: -50px;
-      z-index: 2;
-    }
-
-    .mulher-mascara {
-      width: 152px;
-      height: 152px;
-      top: 70px;
-      left: 40px;
-      z-index: 3;
-    }
-
+    .enfermeira,
+    .mulher-mascara,
     .menino-cabelo {
-      width: 153px;
-      height: 260px;
-      top: -70px;
-      left: 160px;
-      z-index: 2;
+      width: 42vw;
+      max-width: 220px;
+      height: auto;
     }
 
     .logo-quem-somos {
@@ -1929,7 +1946,7 @@ footer {
 
   .perguntas-frequentes {
     padding: 0px 20px;
-    height: 100vh;
+    height: auto;
     margin-top: 0vh;
     margin-bottom: 0vh;
     background-color: var(--Magenta);
@@ -1955,9 +1972,9 @@ footer {
   }
 
   .faq-container {
-    padding: 20px 10px;
-    height: 70vh;
-    overflow-y: hidden;
+    padding: 14px 10px;
+    height: auto;
+    overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
   }
@@ -1966,8 +1983,8 @@ footer {
     font-size: var(--tamanho-fonte-maior);
     font-weight: bold;
     text-align: center;
-    padding-bottom: 20px;
-    margin-bottom: 55px;
+    padding-bottom: 0px;
+    margin-bottom: 16px;
   }
 
   .faq-item {
@@ -1995,7 +2012,7 @@ footer {
 
 .colunas {
   width: 80%;
-  gap: 40px;
+  gap: 10px;
 }
 
 .rodape-contribuir {
@@ -2032,4 +2049,86 @@ footer {
 .servicos-text h1,
 .galeria-header h1 {
   text-align: center;
+}
+
+/* Rodapé: empilhar colunas em telas muito pequenas */
+@media screen and (max-width: 480px) {
+  .rodape_conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 16px;
+  }
+
+  .logo_rodape {
+    width: 100px;
+  }
+
+  .colunas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: stretch;
+  }
+
+  .coluna1 span,
+  .coluna2 span,
+  .coluna3 span {
+    align-items: start;
+  }
+
+  .button_rodape {
+    display: block;
+    width: 100%;
+  }
+
+  /* Home: reduzir padding e aumentar largura do texto */
+  .home {
+    padding-top: 12vh;
+    padding-left: 0;
+    height: 100vh;
+    background-position: center;
+  }
+  .home .home-text {
+    width: 80%;
+    padding: 0;
+    margin-left: 6%;
+    margin-right: 0;
+    height: auto;
+    }
+  .home .home-text h1 {
+    line-height: 1.15;
+  }
+  .home .home-text h1,
+  .home .home-text p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .home .botao-voluntario {
+    width: 10rem;
+    max-width: 80%;
+  }
+
+  /* Sobre: reduzir gaps da grid em mobiles pequenos */
+  .sobre-ima-blocos {
+    gap: 12px;
+  }
+
+  /* Valores: diminuir espaçamento e tamanho dos cards */
+  .valores-grid {
+    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+  .valor-item {
+    padding: 10px;
+    min-height: 88px;
+    border-radius: 12px;
+  }
+  .valor-item i {
+    font-size: 22px;
+  }
+  .valor-item span {
+    font-size: 14px;
+  }
 }
