@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/padrao.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/views.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" type="image/svg+xml" href="../assets/imgs/Logo.svg" />
+    <title>Gerador de Currículo | Mãos Amigas</title>
+  </head>
+  <body>
+    <header>
+      <div class="note-nav">
+        <img
+          src="../assets/imgs/Logo.png"
+          onclick="window.location.href='../index.html'"
+          alt="Logo Mãos Amigas"
+        />
+        <nav>
+          <div class="menu">
+            <ul class="nav-list">
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+              <li><a href="../index.html#impacto">Nosso impacto</a></li>
+              <li><a href="../index.html#servicos">SERVIÇOS</a></li>
+              <li><a href="../index.html#contato">CONTATO</a></li>
+              <li><a href="solicitacao-voluntario.html">VOLUNTARIE-SE</a></li>
+              <li><a href="transparencia.html">TRANSPARÊNCIA</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="mobile-nav">
+        <div class="mobile-nav-container">
+          <img class="logo" src="../assets/imgs/Logo.png" onclick="window.location.href='../index.html'" alt="Logo Mãos Amigas" />
+          <div class="mobile-menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="../assets/imgs/menu.svg" alt="Menu" /></button>
+          </div>
+        </div>
+        <div class="mobile-menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="../index.html">HOME</a></li>
+            <li class="nav-item"><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+            <li class="nav-item"><a href="../index.html#impacto">Nosso impacto</a></li>
+            <li class="nav-item"><a href="../index.html#servicos">SERVIÇOS</a></li>
+            <li class="nav-item"><a href="../index.html#contato">CONTATO</a></li>
+            <li class="nav-item"><a href="solicitacao-voluntario.html">VOLUNTARIE-SE</a></li>
+            <li class="nav-item"><a href="transparencia.html">TRANSPARÊNCIA</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="pagina-curriculo">
+      <section class="curriculo-container">
+        <h1>Gerador de Currículo</h1>
+        <p class="intro">Preencha suas informações e gere um currículo. Em seguida, peça sugestões da IA para melhorar texto, estrutura e pontos fortes.</p>
+
+        <div class="curriculo-grid">
+          <form id="curriculoForm" class="curriculo-form">
+            <div class="duo">
+              <label>Nome completo</label>
+              <input type="text" id="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="duo">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="seu@email.com" />
+            </div>
+            <div class="duo">
+              <label>Telefone</label>
+              <input type="text" id="telefone" placeholder="(xx) xxxxx-xxxx" />
+            </div>
+
+            <div class="full">
+              <label>Título profissional</label>
+              <input type="text" id="titulo" placeholder="Ex.: Analista de Dados" />
+            </div>
+
+            <div class="full">
+              <label>Resumo profissional</label>
+              <textarea id="resumo" rows="4" placeholder="Resumo breve das suas experiências e conquistas"></textarea>
+            </div>
+
+            <div class="full">
+              <label>Habilidades</label>
+              <textarea id="habilidades" rows="3" placeholder="Ex.: Excel, Python, Comunicação"></textarea>
+            </div>
+
+            <div class="full">
+              <label>Experiências</label>
+              <textarea id="experiencias" rows="6" placeholder="Empresa, cargo, período e principais resultados"></textarea>
+            </div>
+
+            <div class="full">
+              <label>Formação</label>
+              <textarea id="formacao" rows="3" placeholder="Cursos, graduação, certificações"></textarea>
+            </div>
+
+            <div class="actions">
+              <button type="button" id="btnGerar">Gerar Currículo</button>
+              <button type="button" id="btnSugestoes">Pedir sugestões da IA</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="rodape">
+        <div class="rodape_conteudo">
+          <img
+            class="logo_rodape"
+            src="../assets/imgs/Logo.png"
+            onclick="window.location.href='../index.html'"
+            alt="Logo Mãos Amigas"
+          />
+          <div class="colunas">
+            <div class="coluna1">
+              <span>
+                <p>ACESSAR</p>
+                <a href="#" class="button_rodape">LOGIN</a>
+                <a href="#" class="button_rodape">CADASTRO</a>
+                <a href="curriculo.html" class="button_rodape">GERAR CURRÍCULO</a>
+              </span>
+            </div>
+
+            <div class="coluna2">
+              <span>
+                <p>SOBRE</p>
+                <a href="../index.html#quem-somos" class="button_rodape">QUEM SOMOS</a>
+                <a href="../index.html#impacto" class="button_rodape">NOSSO IMPACTO</a>
+                <a href="../index.html#servicos" class="button_rodape">SERVIÇOS</a>
+                <a href="transparencia.html" class="button_rodape">TRANSPARÊNCIA</a>
+              </span>
+            </div>
+
+            <div class="coluna3">
+              <span>
+                <p>CONTATO</p>
+                <a href="../index.html#contato" class="button_rodape">CONTATO</a>
+              </span>
+            </div>
+          </div>
+          <div class="rodape-contribuir">
+            <p>GOSTARIA DE CONTRIBUIR?</p>
+            <button onclick="window.location.href='doacao.html'">DOAR AGORA</button>
+          </div>
+        </div>
+        <div class="ultima-linha-rodape">
+          <p>© 2025 Instituto Mãos Amigas. Todos os direitos reservados.</p>
+          <div class="rodape-redes-sociais">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+  </body>
+</html>
